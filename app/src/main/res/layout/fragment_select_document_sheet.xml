@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_large_top_corner_white"
+    tools:context=".modules.signup.SelectDocumentBottomSheet">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/topBar"
+            layout="@layout/common_topbar_notitle_transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_20_dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/selectedImageView"
+            android:layout_width="0dp"
+            android:layout_height="230dp"
+            android:layout_marginStart="@dimen/ui_30_dp"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:layout_marginEnd="@dimen/ui_30_dp"
+            android:scaleType="fitCenter"
+            android:src="@color/light_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBar"
+            app:riv_corner_radius="@dimen/ui_10_dp" />
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/displayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_30_dp"
+            android:text="Scan your Driver's License"
+            android:textColor="@color/themeDark"
+            android:textSize="@dimen/text_16_sp"
+            app:layout_constraintStart_toStartOf="@id/selectedImageView"
+            app:layout_constraintTop_toBottomOf="@id/selectedImageView" />
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/displayText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:layout_marginEnd="@dimen/ui_30_dp"
+            android:text="Make sure there's good lighting and the front of your ID fits within the border - then click Capture. \n\nIf you already have a scanned copy, select a file and upload."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/displayTitle"
+            app:layout_constraintTop_toBottomOf="@id/displayTitle" />
+
+        <LinearLayout
+            android:id="@+id/optionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_50_dp"
+            android:layout_marginBottom="@dimen/ui_40_dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/displayText">
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/capture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/complete_yellow_round_background"
+                android:paddingStart="@dimen/ui_12_dp"
+                android:paddingTop="@dimen/ui_6_dp"
+                android:paddingEnd="@dimen/ui_12_dp"
+                android:paddingBottom="@dimen/ui_6_dp"
+                android:text="Capture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_13_sp" />
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/txtSelectAFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_10_dp"
+                android:text="Select a file"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/optionLayout1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_25_dp"
+            android:layout_marginTop="@dimen/ui_50_dp"
+            android:layout_marginEnd="@dimen/ui_25_dp"
+            android:layout_marginBottom="@dimen/ui_40_dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/displayText">
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/tryAgain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="start"
+                android:text="TRY AGAIN"
+                android:textColor="@color/black" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/confirmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/complete_yellow_round_background"
+                android:gravity="end"
+                android:paddingStart="@dimen/ui_12_dp"
+                android:paddingTop="@dimen/ui_6_dp"
+                android:paddingEnd="@dimen/ui_12_dp"
+                android:paddingBottom="@dimen/ui_6_dp"
+                android:text="Confirm"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_13_sp" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

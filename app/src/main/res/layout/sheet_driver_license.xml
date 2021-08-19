@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/rounded_large_top_corner_white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/ui_30_dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtDriverLicence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_30_dp"
+            android:layout_marginTop="@dimen/ui_25_dp"
+            android:text="Driver's Licence"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_18_sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/cardNumberLayout"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="@dimen/ui_40_dp"
+            android:layout_marginTop="@dimen/ui_20_dp"
+            android:layout_marginEnd="@dimen/ui_20_dp"
+            android:background="@drawable/all_rounded_grey_background"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txtDriverLicence"
+            app:layout_constraintTop_toBottomOf="@id/txtDriverLicence">
+
+            <ImageView
+                android:layout_width="@dimen/ui_20_dp"
+                android:layout_height="@dimen/ui_20_dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/ui_12_dp"
+                android:src="@drawable/card_number_icon" />
+
+            <devx.app.licensee.common.custumViews.BoldBlackTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_5_dp"
+                android:text="CARD NUMBER"
+                android:textSize="@dimen/text_13_sp" />
+
+            <EditText
+                android:id="@+id/cardNumberET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_5_dp"
+                android:layout_marginEnd="@dimen/ui_10_dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="end"
+                android:hint="123456789"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:textSize="@dimen/text_13_sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/expiryDateLayout"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="@dimen/ui_40_dp"
+            android:layout_marginTop="@dimen/ui_20_dp"
+            android:layout_marginEnd="@dimen/ui_20_dp"
+            android:background="@drawable/all_rounded_grey_background"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txtDriverLicence"
+            app:layout_constraintTop_toBottomOf="@id/cardNumberLayout">
+
+            <ImageView
+                android:layout_width="@dimen/ui_20_dp"
+                android:layout_height="@dimen/ui_20_dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/ui_12_dp"
+                android:src="@drawable/ic_success_white_24dp" />
+
+            <devx.app.licensee.common.custumViews.BoldBlackTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_5_dp"
+                android:text="EXPIRY DATE"
+                android:textSize="@dimen/text_13_sp" />
+
+            <EditText
+                android:id="@+id/DLMonthExpiry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_5_dp"
+                android:layout_weight="1020"
+                android:background="@null"
+                android:gravity="end"
+                android:hint="MM"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textSize="@dimen/text_13_sp" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_3_dp"
+                android:text="/" />
+
+            <EditText
+                android:id="@+id/DLYearExpiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_5_dp"
+                android:layout_marginEnd="@dimen/ui_10_dp"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="YYYY"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textSize="@dimen/text_13_sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stateLayout"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="@dimen/ui_40_dp"
+            android:layout_marginTop="@dimen/ui_20_dp"
+            android:layout_marginEnd="@dimen/ui_20_dp"
+            android:background="@drawable/all_rounded_grey_background"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/expiryDateLayout"
+            app:layout_constraintTop_toBottomOf="@id/expiryDateLayout">
+
+            <ImageView
+                android:layout_width="@dimen/ui_20_dp"
+                android:layout_height="@dimen/ui_20_dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/ui_12_dp"
+                android:src="@drawable/state_icon" />
+
+            <devx.app.licensee.common.custumViews.BoldBlackTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_5_dp"
+                android:text="STATE"
+                android:textSize="@dimen/text_13_sp"/>
+
+            <Spinner
+                android:id="@+id/stateSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_10_dp"
+                android:layout_marginEnd="@dimen/ui_10_dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="end"
+                android:hint="New South Wales"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:spinnerMode="dropdown"
+                android:textColor="#000"
+                android:textSize="@dimen/text_13_sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/ui_10_dp"
+                android:src="@drawable/arrow_down_float"
+                app:tint="@color/c2_dark4_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/scanLayout"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="@dimen/ui_40_dp"
+            android:layout_marginTop="@dimen/ui_20_dp"
+            android:layout_marginEnd="@dimen/ui_20_dp"
+            android:background="@drawable/all_rounded_grey_background"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/stateLayout"
+            app:layout_constraintTop_toBottomOf="@id/stateLayout">
+
+            <ImageView
+                android:layout_width="@dimen/ui_20_dp"
+                android:layout_height="@dimen/ui_20_dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/ui_12_dp"
+                android:src="@drawable/scan_icon" />
+
+            <devx.app.licensee.common.custumViews.BoldBlackTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_5_dp"
+                android:text="ADD SCAN"
+                android:textSize="@dimen/text_13_sp" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/scanImageTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_5_dp"
+                android:layout_marginEnd="@dimen/ui_10_dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:hint="Add Scan"
+                android:textSize="@dimen/text_13_sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addDriverLicenceLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_30_dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/scanLayout"
+            app:layout_constraintStart_toStartOf="@id/scanLayout"
+            app:layout_constraintTop_toBottomOf="@id/scanLayout">
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Driver's Licence"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_13_sp" />
+
+            <ImageView
+                android:layout_width="@dimen/ui_20_dp"
+                android:layout_height="@dimen/ui_20_dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_8_dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/blue_forward_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/closeDLDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_15_dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/scanLayout"
+            app:layout_constraintStart_toStartOf="@id/scanLayout"
+            app:layout_constraintTop_toBottomOf="@id/addDriverLicenceLayout">
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="@color/dimGrey"
+                android:textSize="@dimen/text_13_sp" />
+
+            <ImageView
+                android:layout_width="@dimen/ui_16_dp"
+                android:layout_height="@dimen/ui_16_dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_8_dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dim_grey_close" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

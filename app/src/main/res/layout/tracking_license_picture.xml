@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/rounded_large_top_corner_white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/ui_30_dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtDriverLicence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_30_dp"
+            android:layout_marginTop="@dimen/ui_25_dp"
+            android:text="Customer Driving Licence"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_18_sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgLicense"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginStart="@dimen/ui_30_dp"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:layout_marginEnd="@dimen/ui_30_dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_photo_library"
+            app:layout_constraintEnd_toEndOf="@id/txtDriverLicence"
+            app:layout_constraintStart_toStartOf="@id/txtDriverLicence"
+            app:layout_constraintTop_toBottomOf="@id/txtDriverLicence"
+            app:riv_corner_radius="@dimen/ui_10_dp" />
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/txtAddLicense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:drawableRight="@drawable/blue_forward_arrow"
+            android:drawablePadding="@dimen/ui_5_dp"
+            android:gravity="center_vertical"
+            android:text="Add Driver's Licence"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_13_sp"
+            app:layout_constraintEnd_toEndOf="@id/imgLicense"
+            app:layout_constraintStart_toStartOf="@id/imgLicense"
+            app:layout_constraintTop_toBottomOf="@id/imgLicense" />
+
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/txtCloseBottomSheet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:drawableRight="@drawable/dim_grey_close"
+            android:drawablePadding="@dimen/ui_5_dp"
+            android:gravity="center_vertical"
+            android:text="Close"
+            android:textColor="@color/dimGrey"
+            android:textSize="@dimen/text_13_sp"
+            app:layout_constraintEnd_toEndOf="@id/txtAddLicense"
+            app:layout_constraintStart_toStartOf="@id/txtAddLicense"
+            app:layout_constraintTop_toBottomOf="@id/txtAddLicense" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

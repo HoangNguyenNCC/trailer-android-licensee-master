@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profileSwipeToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFEFD">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/ui_70_dp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_30_dp"
+                    android:text="YOUR PROFILE"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_20_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_3_dp"
+                    android:text="Hello there!"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/text_12_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textView" />
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text2"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewEmployeeProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ui_20_dp"
+                        android:layout_marginTop="@dimen/ui_10_dp"
+                        android:layout_marginEnd="@dimen/ui_20_dp"
+                        app:cardCornerRadius="@dimen/ui_8_dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/ui_15_dp">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/userProfileImageView"
+                                android:layout_width="@dimen/ui_50_dp"
+                                android:layout_height="@dimen/ui_50_dp"
+                                android:layout_margin="@dimen/ui_5_dp"
+                                android:src="@color/shimmerColor">
+                            </de.hdodenhof.circleimageview.CircleImageView>
+                            <LinearLayout
+                                android:layout_toRightOf="@+id/userProfileImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/ui_5_dp"
+                                android:layout_marginEnd="@dimen/ui_5_dp">
+                                <devx.app.licensee.common.custumViews.BoldTextView
+
+                                    android:id="@+id/userName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_14_sp"
+                                    app:layout_constraintBottom_toBottomOf="@id/imageView"
+                                    app:layout_constraintStart_toStartOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toBottomOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                                <devx.app.licensee.common.custumViews.BoldTextView
+                                    android:id="@+id/userEmail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/gray1"
+                                    android:textSize="@dimen/text_11_sp"
+                                    app:layout_constraintBottom_toBottomOf="@id/imageView"
+                                    app:layout_constraintStart_toStartOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toBottomOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewLicenseeProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ui_20_dp"
+                        android:layout_marginTop="@dimen/ui_10_dp"
+                        android:layout_marginEnd="@dimen/ui_20_dp"
+                        app:cardCornerRadius="@dimen/ui_8_dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/ui_15_dp">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="@dimen/ui_50_dp"
+                                android:layout_height="@dimen/ui_50_dp"
+                                android:layout_margin="@dimen/ui_5_dp"
+                                android:src="@color/shimmerColor">
+                            </de.hdodenhof.circleimageview.CircleImageView>
+                            <LinearLayout
+                                android:layout_toRightOf="@+id/imageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/ui_5_dp"
+                                android:layout_marginEnd="@dimen/ui_5_dp">
+                                <devx.app.licensee.common.custumViews.BoldTextView
+
+                                    android:id="@+id/pBusinessName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_14_sp"
+                                    app:layout_constraintBottom_toBottomOf="@id/imageView"
+                                    app:layout_constraintStart_toStartOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toBottomOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                                <devx.app.licensee.common.custumViews.BoldTextView
+                                    android:id="@+id/pBusinessMobile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/gray1"
+                                    android:textSize="@dimen/text_11_sp"
+                                    app:layout_constraintBottom_toBottomOf="@id/imageView"
+                                    app:layout_constraintStart_toStartOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toBottomOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewNotificationSettings"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ui_20_dp"
+                        android:layout_marginTop="@dimen/ui_10_dp"
+                        android:layout_marginEnd="@dimen/ui_20_dp"
+                        app:cardCornerRadius="@dimen/ui_8_dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/ui_15_dp">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgNotification"
+                                android:layout_width="@dimen/ui_50_dp"
+                                android:layout_height="@dimen/ui_50_dp"
+                                android:layout_margin="@dimen/ui_5_dp"
+                                android:src="@drawable/ic_notification">
+                            </de.hdodenhof.circleimageview.CircleImageView>
+                            <LinearLayout
+                                android:layout_toRightOf="@+id/imgNotification"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/ui_5_dp"
+                                android:layout_marginEnd="@dimen/ui_5_dp">
+                                <devx.app.licensee.common.custumViews.BoldTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Notification Settings"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_14_sp"
+                                    app:layout_constraintBottom_toBottomOf="@id/imageView"
+                                    app:layout_constraintStart_toStartOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toBottomOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                                <devx.app.licensee.common.custumViews.BoldTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="When you would like to be notified?"
+                                    android:textColor="@color/gray1"
+                                    android:textSize="@dimen/text_11_sp"
+                                    app:layout_constraintBottom_toBottomOf="@id/imageView"
+                                    app:layout_constraintStart_toStartOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toBottomOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewAboutUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ui_20_dp"
+                        android:layout_marginTop="@dimen/ui_10_dp"
+                        android:layout_marginEnd="@dimen/ui_20_dp"
+                        app:cardCornerRadius="@dimen/ui_8_dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/ui_15_dp">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgAboutUs"
+                                android:layout_width="@dimen/ui_50_dp"
+                                android:layout_height="@dimen/ui_50_dp"
+                                android:layout_margin="@dimen/ui_5_dp"
+                                android:src="@drawable/ic_about_us">
+                            </de.hdodenhof.circleimageview.CircleImageView>
+                            <LinearLayout
+                                android:layout_toRightOf="@+id/imgAboutUs"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/ui_5_dp"
+                                android:layout_marginEnd="@dimen/ui_5_dp">
+                                <devx.app.licensee.common.custumViews.BoldTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="About Us"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_14_sp"
+                                    app:layout_constraintBottom_toBottomOf="@id/imageView"
+                                    app:layout_constraintStart_toStartOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toBottomOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                                <devx.app.licensee.common.custumViews.BoldTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Something about us"
+                                    android:textColor="@color/gray1"
+                                    android:textSize="@dimen/text_11_sp"
+                                    app:layout_constraintBottom_toBottomOf="@id/imageView"
+                                    app:layout_constraintStart_toStartOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toBottomOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewFinancial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ui_20_dp"
+                        android:layout_marginTop="@dimen/ui_10_dp"
+                        android:layout_marginEnd="@dimen/ui_20_dp"
+                        android:layout_marginBottom="@dimen/ui_10_dp"
+                        app:cardCornerRadius="@dimen/ui_8_dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/ui_15_dp">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgFinancial"
+                                android:layout_width="@dimen/ui_50_dp"
+                                android:layout_height="@dimen/ui_50_dp"
+                                android:layout_margin="@dimen/ui_5_dp"
+                                android:src="@drawable/ic_financial">
+                            </de.hdodenhof.circleimageview.CircleImageView>
+                            <LinearLayout
+                                android:layout_toRightOf="@+id/imgFinancial"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/ui_5_dp"
+                                android:layout_marginEnd="@dimen/ui_5_dp">
+                                <devx.app.licensee.common.custumViews.BoldTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Financial"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_14_sp"
+                                    app:layout_constraintBottom_toBottomOf="@id/imageView"
+                                    app:layout_constraintStart_toStartOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toBottomOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                                <devx.app.licensee.common.custumViews.BoldTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Know about business"
+                                    android:textColor="@color/gray1"
+                                    android:textSize="@dimen/text_11_sp"
+                                    app:layout_constraintBottom_toBottomOf="@id/imageView"
+                                    app:layout_constraintStart_toStartOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toBottomOf="@id/pBusinessName"
+                                    app:layout_constraintTop_toTopOf="@id/imageView" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <devx.app.licensee.common.custumViews.RegularTextView
+                        android:id="@+id/logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ui_3_dp"
+                        android:layout_margin="@dimen/ui_20_dp"
+                        android:text="Logout"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_16_sp"
+                        android:gravity="center"
+                        android:padding="@dimen/ui_15_dp"
+                        android:background="@drawable/all_square_rounded_yellow_background"
+                        />
+                </LinearLayout>
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/txtFinancial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:text="FINANCIALS"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_12_sp"
+                    android:visibility="gone"
+                    tools:ignore="MissingConstraints" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/earningChartCardView"
+
+                    android:visibility="gone"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="@dimen/ui_20_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_20_dp"
+                    app:cardCornerRadius="@dimen/ui_10_dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtFinancial">
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/lineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--<include
+                android:id="@+id/profileShimmerLayout"
+                layout="@layout/profile_placeholder_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:visibility="gone" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

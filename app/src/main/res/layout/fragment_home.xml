@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeSwipeToRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFEFD">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFEFD">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_30_dp"
+            android:text="Licensee at a glance"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_17_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOUR TRAILERS"
+            android:layout_marginTop="@dimen/ui_3_dp"
+            android:textColor="@color/cancel_btn"
+            android:textSize="@dimen/text_12_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/requestTypeLayout"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="@dimen/ui_32_dp"
+            android:layout_marginStart="@dimen/ui_15_dp"
+            android:layout_marginTop="@dimen/ui_15_dp"
+            android:layout_marginEnd="@dimen/ui_15_dp"
+            android:background="@drawable/all_square_rounded_greyy_background"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="visible">
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/txtTrailers"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/ui_2_dp"
+                android:layout_weight="1"
+                android:background="@drawable/all_square_rounded_yellow_background"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Trailers"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12_sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="@dimen/ui_1_dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/ui_8_dp"
+                android:layout_marginBottom="@dimen/ui_8_dp"
+                android:background="#8E8E93"
+                android:visibility="gone" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/txtUpsell"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/ui_2_dp"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Upsell"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_12_sp" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="@dimen/ui_1_dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/ui_8_dp"
+                android:layout_marginBottom="@dimen/ui_8_dp"
+                android:background="#8E8E93" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/txtEmployee"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/ui_2_dp"
+                android:layout_weight="1"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:text="Employees"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_12_sp" />
+
+        </LinearLayout>
+        <RelativeLayout
+        android:id="@+id/lytUpsellItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/requestTypeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+        >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/upSellItemRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_12_dp"
+                android:focusableInTouchMode="true"
+                android:nestedScrollingEnabled="true"
+                android:layout_marginBottom="70dp"
+                tools:itemCount="5"
+                android:visibility="visible"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/select_up_sell_item_layout"/>
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/txtNoUpsellItemAdded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="No Upsell Item Added, yet!"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_17_sp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/lytTrailer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/requestTypeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="visible"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myAllTrailerRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_12_dp"
+                android:focusableInTouchMode="true"
+                android:nestedScrollingEnabled="true"
+                android:layout_marginBottom="70dp"
+                tools:itemCount="5"
+                android:visibility="visible"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/profile_your_trailer_item_layout" />
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/txtViewNoDataFind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="No Trailers Found"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_17_sp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lytEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/requestTypeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/myEmployeeRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_12_dp"
+                android:focusableInTouchMode="true"
+                android:nestedScrollingEnabled="true"
+                android:layout_marginBottom="70dp"
+                tools:itemCount="2"
+                android:visibility="visible"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/sgl_item_employee" />
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/txtViewNoEmployeeFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="No Employee Added ,yet!"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_17_sp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

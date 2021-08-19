@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ui_8_dp"
+    android:background="@drawable/round_square_white_background"
+    android:elevation="@dimen/ui_2_dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:padding="3dp">
+
+    <ImageView
+        android:id="@+id/trailerImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_150_dp"
+        android:scaleType="centerInside"
+        android:src="@color/light_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <devx.app.licensee.common.custumViews.BoldBlackTextView
+        android:id="@+id/trailerTitle"
+        android:layout_width="@dimen/ui_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="@dimen/ui_10_dp"
+        android:layout_marginRight="5dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:paddingEnd="@dimen/ui_5_dp"
+        android:text="Painted Tandem"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_12_sp"
+        app:layout_constraintEnd_toStartOf="@id/addBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trailerImage" />
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/trailerPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:maxLines="2"
+        android:text="From 5400 AUD / hr."
+        android:textColor="@color/text_color_gray"
+        android:textSize="@dimen/text_11_sp"
+        app:layout_constraintEnd_toStartOf="@id/addBtn"
+        app:layout_constraintStart_toStartOf="@id/trailerTitle"
+        app:layout_constraintTop_toBottomOf="@id/trailerTitle" />
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/complete_lightblue_round_background"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="5dp"
+        android:text="Add"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trailerImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

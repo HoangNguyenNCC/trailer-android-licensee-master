@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/rTopT1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Add Trailer"
+                android:textColor="@color/themeGrey"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/rTopT2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Trailer"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rTopT1" />
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/traiInstr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="10dp"
+                android:text="Add Trailer Images"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rTopT2" />
+
+            <ImageView
+                android:id="@+id/rTrailerPreview"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="12dp"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@+id/traiInstr"
+                app:srcCompat="@drawable/ic_add_circle_grey_24dp"
+                tools:visibility="gone" />
+
+            <ScrollView
+                android:id="@+id/rTrailerPreviewImagesScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:fillViewport="true"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rTrailerPreview"
+                tools:layout_height="70dp"
+                tools:layout_width="70dp">
+
+                <LinearLayout
+                    android:id="@+id/rTrailerPreviewImagesLL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/placeholder_bg"
+                    android:orientation="horizontal"
+                    android:scaleType="fitCenter"
+                    tools:layout_height="70dp"
+                    tools:layout_width="70dp" />
+
+            </ScrollView>
+
+            <EditText
+                android:id="@+id/rTrailerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="25dp"
+                android:background="@null"
+                android:hint="Enter Trailer Name"
+                android:paddingRight="12dp"
+                android:textColor="@color/themeGrey"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rTrailerPreviewImagesScrollView" />
+
+
+            <LinearLayout
+                android:id="@+id/aVinNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rTrailerName">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="VIN NUMBER"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/aVinNumberET"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="3434"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aInsuranceLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aVinNumber">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="INSURANCE"
+                    android:textSize="12sp" />
+
+                <devx.app.licensee.common.custumViews.YellowBoldBtn
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/complete_yellow_round_background"
+                    android:maxLines="1"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="6dp"
+                    android:text="Upload"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_10_sp" />
+
+
+                <devx.app.licensee.common.custumViews.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="12dp"
+                    android:paddingBottom="6dp"
+                    android:text="Added.."
+                    android:textColor="@color/c2_light_green"
+                    android:textSize="@dimen/text_10_sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aSizeLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aInsuranceLL">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="SIZE"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/aSizeET"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="6FT X 4 FT"
+                    android:maxLines="1"
+                    android:padding="6dp"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aCapacityLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aSizeLL">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="CAPACITY"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/aCapacityET"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="1500 KGS"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aDescriptionLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aCapacityLL">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="DESCRIPTION"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/aDescriptionET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@null"
+                    android:hint="We manufacture three types of pantec trailers, the aluminium bodied, the galvanised steel enclosed trailer and the galvanised steel pantec top that fits onto a box trailer."
+                    android:padding="8dp"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="@dimen/text_12_sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.666"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aDescriptionLL">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:id="@+id/aTypeTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="TYPE"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/aTypeET"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="SIDE DOOR"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aType">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="Location"
+                    android:textAllCaps="true"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="1525, EASTWELL AVE."
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aAvailability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aLocation">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="Availability"
+                    android:textAllCaps="true"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="ACTIVE"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aAvailability">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="Rate"
+                    android:textAllCaps="true"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="6500 AUD / HR"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/aAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aRate">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="Age"
+                    android:textAllCaps="true"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/aAgeET"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="end"
+                    android:hint="2 YEARS"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <devx.app.licensee.common.custumViews.YellowBoldBtn
+                android:id="@+id/rRentButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="25dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Add Trailer"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/aAge" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/common_topbar_notitle_transparent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

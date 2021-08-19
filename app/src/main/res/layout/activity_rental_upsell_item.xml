@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/bTopT1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                tools:text="Tradesman's Trailers"
+                android:textAllCaps="true"
+                android:textColor="@color/themeLight"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/bTopT2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Additional Items"
+                android:textColor="@color/themeDark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bTopT1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/upsellRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bTopT2"
+                tools:listitem="@layout/item_upsellitem_booking" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/uTotalRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="@color/white"
+        android:paddingBottom="20dp"
+        android:text="TOTAL RENT"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/payNow"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <devx.app.licensee.common.custumViews.RegularTextView android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:paddingBottom="20dp"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:text="7200 AUD / HR"
+        android:textAlignment="textEnd"
+        android:textColor="@color/themeLight"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/payNow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/uTotalRent" />
+
+    <devx.app.licensee.common.custumViews.YellowBoldBtn
+        android:id="@+id/payNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="Pay Now"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include layout="@layout/common_topbar_notitle_transparent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ui_8_dp"
+    android:background="@drawable/round_square_white_background"
+    android:foreground="?attr/selectableItemBackground">
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/permissionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_20_dp"
+        android:layout_marginTop="@dimen/ui_12_dp"
+        android:layout_marginBottom="@dimen/ui_12_dp"
+        android:text="Permission 1"
+        android:textSize="@dimen/text_14_sp"
+        android:textColor="@color/light_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/lytColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ui_10_dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/ui_8_dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <View
+            android:id="@+id/viewAdd"
+            android:layout_width="@dimen/ui_10_dp"
+            android:layout_height="@dimen/ui_10_dp"
+            android:background="@color/green"
+            android:layout_margin="@dimen/ui_2_dp"
+            android:visibility="gone"></View>
+        <View
+            android:id="@+id/viewView"
+            android:layout_width="@dimen/ui_10_dp"
+            android:layout_height="@dimen/ui_10_dp"
+            android:background="#41A0FF"
+            android:layout_margin="@dimen/ui_2_dp"
+            android:visibility="gone"></View>
+        <View
+            android:id="@+id/viewUpdate"
+            android:layout_width="@dimen/ui_10_dp"
+            android:layout_height="@dimen/ui_10_dp"
+            android:background="@color/light_orange"
+            android:layout_margin="@dimen/ui_2_dp"
+            android:visibility="gone"></View>
+        <View
+            android:id="@+id/viewDelete"
+            android:layout_width="@dimen/ui_10_dp"
+            android:layout_height="@dimen/ui_10_dp"
+            android:background="@color/red"
+            android:layout_margin="@dimen/ui_2_dp"
+            android:visibility="gone"></View>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

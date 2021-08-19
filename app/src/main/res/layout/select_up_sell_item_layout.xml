@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/ui_15_dp"
+    android:layout_marginTop="@dimen/ui_10_dp"
+    android:layout_marginEnd="@dimen/ui_15_dp"
+    android:background="@drawable/round_square_white_background">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/trailerImage"
+        android:layout_width="@dimen/ui_80_dp"
+        android:layout_height="@dimen/ui_80_dp"
+        android:layout_marginStart="@dimen/ui_12_dp"
+        android:layout_marginTop="@dimen/ui_12_dp"
+        android:layout_marginBottom="@dimen/ui_12_dp"
+        android:background="@color/shimmerColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/ui_8_dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/trailerImage"
+        android:layout_centerVertical="true">
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/trailerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_12_dp"
+            android:layout_marginEnd="@dimen/ui_12_dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Luggage Trailer"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_13_sp" />
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/trailerVIN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_12_dp"
+            android:layout_marginEnd="@dimen/ui_12_dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="VIN"
+            android:visibility="gone"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_13_sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

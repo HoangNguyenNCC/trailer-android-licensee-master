@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_square_white_background"
+    android:foreground="?attr/selectableItemBackground"
+    android:padding="@dimen/ui_5_dp"
+    android:elevation="@dimen/ui_1_dp"
+    android:paddingBottom="@dimen/ui_10_dp">
+
+    <ImageView
+        android:id="@+id/trailerImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_150_dp"
+        android:padding="3dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <devx.app.licensee.common.custumViews.BoldBlackTextView
+        android:id="@+id/trailerTitle"
+        android:layout_width="@dimen/ui_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ui_10_dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingEnd="@dimen/ui_5_dp"
+        android:text="Painted Tandem"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_14_sp"
+        app:layout_constraintEnd_toEndOf="@id/trailerImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/trailerImage" />
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/trailerPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="From 540 AUD / hr."
+        android:textSize="@dimen/text_11_sp"
+        app:layout_constraintEnd_toEndOf="@id/trailerTitle"
+        app:layout_constraintStart_toStartOf="@id/trailerTitle"
+        app:layout_constraintTop_toBottomOf="@id/trailerTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

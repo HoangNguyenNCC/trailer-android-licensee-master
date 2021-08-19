@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_large_top_corner_white">
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:padding="6dp"
+        android:text="Trailer Documents"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:textSize="@dimen/ui_14_dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="Please Select an option"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:textSize="@dimen/ui_14_dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/btnUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:textSize="@dimen/ui_14_dp"
+        android:background="@drawable/all_rounded_grey_background_stroke"
+        android:padding="6dp"
+        android:text="Update Insurance"
+        android:textAlignment="center"
+        android:textColor="@color/themeIphoneBlue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle"
+        android:visibility="visible"/>
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/btnView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/all_rounded_grey_background_stroke"
+        android:padding="6dp"
+        android:text="View Insurance"
+        android:textAlignment="center"
+        android:textSize="@dimen/ui_14_dp"
+        android:textColor="@color/themeIphoneBlue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdate"
+        android:visibility="visible" />
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/all_rounded_grey_background_stroke"
+        android:padding="4dp"
+        android:text="Cancel"
+        android:textSize="@dimen/ui_14_dp"
+        android:textAlignment="center"
+        android:textColor="@color/themeIphoneBlue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

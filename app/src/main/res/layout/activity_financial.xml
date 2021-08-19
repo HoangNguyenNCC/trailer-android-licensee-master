@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFEFD"
+    tools:context=".modules.financial.FinancialActivity">
+
+    <include layout="@layout/common_topbar_notitle_transparent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ui_50_dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Moneyball"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_20_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/ui_10_dp"/>
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRAILER2YOU"
+                android:textColor="@color/cancel_btn"
+                android:textSize="@dimen/text_12_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView1" />
+
+
+
+
+          <RelativeLayout
+              android:id="@+id/lyt"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@id/textView"
+              android:layout_marginStart="@dimen/ui_20_dp"
+              android:layout_marginTop="@dimen/ui_20_dp"
+              android:layout_marginEnd="@dimen/ui_20_dp">
+              <devx.app.licensee.common.custumViews.BoldTextView
+                  android:id="@+id/textView2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="EARNINGS"
+                  android:textColor="@color/light_black"
+                  android:textSize="@dimen/text_12_sp"/>
+              <devx.app.licensee.common.custumViews.BoldTextView
+                  android:id="@+id/txtEarnings"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="EARNINGS"
+                  android:textColor="@color/green"
+                  android:textSize="@dimen/text_12_sp"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerVertical="true"
+                  />
+          </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/earningChartCardView"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="@dimen/ui_20_dp"
+                android:layout_marginTop="@dimen/ui_5_dp"
+                android:layout_marginEnd="@dimen/ui_20_dp"
+                android:elevation="0.1dp"
+                app:cardCornerRadius="@dimen/ui_10_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lyt">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/ui_10_dp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_20_dp"
+                android:layout_marginTop="@dimen/ui_20_dp"
+                android:text="TRAILER FINANCIAL"
+                android:textSize="@dimen/text_12_sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/earningChartCardView" />
+
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/txtNoFinancial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_20_dp"
+                android:layout_marginTop="@dimen/ui_20_dp"
+                android:text="No Financials, yet!"
+                android:textSize="@dimen/text_20_sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt"
+                android:gravity="center_horizontal"
+                android:visibility="gone"/>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/financialTrailerList"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_20_dp"
+                android:layout_marginTop="@dimen/ui_10_dp"
+                android:layout_marginEnd="@dimen/ui_20_dp"
+                android:paddingBottom="@dimen/ui_50_dp"
+                android:layout_marginBottom="@dimen/ui_70_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt"
+                tools:listitem="@layout/financial_trailers_item_layout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

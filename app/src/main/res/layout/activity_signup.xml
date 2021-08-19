@@ -1,0 +1,896 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/closeIcon"
+        android:layout_width="@dimen/ui_32_dp"
+        android:layout_height="@dimen/ui_32_dp"
+        android:layout_marginStart="@dimen/ui_32_dp"
+        android:layout_marginTop="@dimen/ui_35_dp"
+        android:background="@drawable/complete_gray_round_background"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="@dimen/ui_7_dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_close_black_24dp" />
+
+    <devx.app.licensee.common.custumViews.BoldBlackTextView
+        android:id="@+id/textSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ui_35_dp"
+        android:text="Signup"
+        android:textSize="@dimen/text_20_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/txtHeaderTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WELCOME"
+        android:textColor="@color/themeGrey"
+        android:textSize="@dimen/text_11_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textSignUp" />
+
+    <ScrollView
+        android:id="@+id/signupScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/lytSignupButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHeaderTitle"
+        app:layout_constraintVertical_bias="0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/lytSelectUserType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="180dp"
+                tools:context=".modules.signup.SignupActivity"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose User Type"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14_sp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/ui_50_dp"/>
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/btnOwner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OWNER"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/text_16_sp"
+                    android:layout_marginTop="@dimen/ui_50_dp"
+                    android:background="@drawable/all_square_rounded_yellow_background"
+                    android:padding="@dimen/ui_12_dp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/ic_owner"
+                    android:layout_marginLeft="@dimen/ui_20_dp"
+                    android:layout_marginRight="@dimen/ui_20_dp"/>
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/btnEmployee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EMPLOYEE"
+                    android:textColor="@color/black"
+                    android:textAllCaps="true"
+                    android:textSize="@dimen/text_16_sp"
+                    android:layout_marginTop="@dimen/ui_20_dp"
+                    android:background="@drawable/all_square_rounded_yellow_background"
+                    android:padding="@dimen/ui_12_dp"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/ic_employee"
+                    android:layout_marginLeft="@dimen/ui_20_dp"
+                    android:layout_marginRight="@dimen/ui_20_dp"/>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/userDetailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="180dp"
+                tools:context=".modules.signup.SignupActivity"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userProfileImageView"
+                    android:layout_width="@dimen/ui_80_dp"
+                    android:layout_height="@dimen/ui_80_dp"
+                    android:layout_marginTop="@dimen/ui_35_dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:src="@color/shimmerColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/ringView"
+                    android:layout_width="@dimen/ui_80_dp"
+                    android:layout_height="@dimen/ui_80_dp"
+                    android:layout_margin="@dimen/ui_8_dp"
+                    android:background="@drawable/circle_ring_black_border"
+                    app:layout_constraintBottom_toBottomOf="@id/userProfileImageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/userProfileImageView" />
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="@dimen/ui_24_dp"
+                    android:layout_height="@dimen/ui_24_dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ringView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ringView"
+                    app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+                <RelativeLayout
+                    android:id="@+id/fullNameLayout"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_32_dp"
+                    android:layout_marginTop="@dimen/ui_30_dp"
+                    android:layout_marginEnd="@dimen/ui_32_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userProfileImageView">
+
+                    <EditText
+                        android:id="@+id/fullNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ui_45_dp"
+                        android:layout_toStartOf="@id/fullNameInfo"
+                        android:background="@null"
+                        android:hint="Full Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/ui_18_dp"
+                        android:textSize="@dimen/text_14_sp" />
+
+                    <ImageView
+                        android:id="@+id/fullNameInfo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/ui_12_dp"
+                        app:srcCompat="@drawable/ic_info_blue" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/titleLayout"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_32_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_32_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fullNameLayout">
+
+                    <EditText
+                        android:id="@+id/titleEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ui_45_dp"
+                        android:layout_toStartOf="@id/titleInfo"
+                        android:background="@null"
+                        android:hint="Title in Company"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/ui_18_dp"
+                        android:textSize="@dimen/text_14_sp" />
+
+                    <ImageView
+                        android:id="@+id/titleInfo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/ui_12_dp"
+                        app:srcCompat="@drawable/ic_info_blue" />
+
+                </RelativeLayout>
+                <EditText
+                    android:id="@+id/addressEditText"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_32_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_32_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="Address"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="2"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/titleLayout" />
+
+                <RelativeLayout
+                    android:id="@+id/mobileEditTextRL"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_32_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_32_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/addressEditText">
+
+
+                <TextView
+                    android:id="@+id/cc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="+61" />
+                <EditText
+                    android:id="@+id/mobileEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="Mobile"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/cc"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingStart="@dimen/ui_8_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/emailAddressEditText"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_32_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_32_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="Email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mobileEditTextRL" />
+                <RelativeLayout
+                    android:id="@+id/userDOBInfoLayout"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_32_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_32_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/emailAddressEditText">
+
+
+
+                    <devx.app.licensee.common.custumViews.RegularTextView
+                        android:id="@+id/userDOB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Date of Birth"
+                        android:textColor="@color/black"
+                        android:paddingStart="@dimen/ui_18_dp"
+                        android:textSize="@dimen/text_14_sp"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/passwordEditTextRL"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_32_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_32_dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userDOBInfoLayout">
+
+                    <EditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="Password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                   />
+
+                    <ImageView
+                        android:id="@+id/infoPassword"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/ui_12_dp"
+                        app:srcCompat="@drawable/ic_info_blue" />
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/confirmPasswordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_32_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_32_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="Confirm Password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/passwordEditTextRL"/>
+                <EditText
+                    android:id="@+id/addDrivingLicenseEditText"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_32_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_32_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="Add Driving License"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/confirmPasswordEditText" />
+                <LinearLayout
+                    android:id="@+id/additionalDocumentLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_35_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_35_dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addDrivingLicenseEditText">
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/additionalDocumentText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/all_square_rounded_yellow_background"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:text="Additional Proof"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/text_10_sp" />
+                    <ImageView
+                        android:id="@+id/infoAdditionalDocument"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/ui_5_dp"
+                        app:srcCompat="@drawable/ic_info_blue" />
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/additionalDocumentLayoutTxtNoFileAdded"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:text="No File Added"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="@dimen/text_11_sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/businessDetailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="180dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/businessProfileImageView"
+                    android:layout_width="@dimen/ui_80_dp"
+                    android:layout_height="@dimen/ui_80_dp"
+                    android:layout_marginTop="@dimen/ui_35_dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:src="@color/shimmerColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/ringView1"
+                    android:layout_width="@dimen/ui_80_dp"
+                    android:layout_height="@dimen/ui_80_dp"
+                    android:layout_margin="@dimen/ui_8_dp"
+                    android:background="@drawable/circle_ring_black_border"
+                    app:layout_constraintBottom_toBottomOf="@id/businessProfileImageView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/businessProfileImageView" />
+
+                <ImageView
+                    android:id="@+id/icon1"
+                    android:layout_width="@dimen/ui_24_dp"
+                    android:layout_height="@dimen/ui_24_dp"
+                    app:layout_constraintBottom_toBottomOf="@id/ringView1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ringView1"
+                    app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+                <Spinner
+                    android:id="@+id/businessTypeSpinner"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_32_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:spinnerMode="dropdown"
+                    android:textColor="#989898"
+                    android:textSize="@dimen/text_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/businessProfileImageView" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="12dp"
+                    android:layout_marginRight="18dp"
+                    android:src="@drawable/arrow_down_float"
+                    android:tint="@color/dark_gray"
+                    app:layout_constraintBottom_toBottomOf="@+id/businessTypeSpinner"
+                    app:layout_constraintEnd_toEndOf="@+id/businessTypeSpinner"
+                    app:layout_constraintTop_toTopOf="@+id/businessTypeSpinner" />
+
+                <RelativeLayout
+                    android:id="@+id/bNameLayout"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/businessTypeSpinner">
+
+                    <EditText
+                        android:id="@+id/businessNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ui_45_dp"
+                        android:layout_toStartOf="@id/bNameInfo"
+                        android:background="@null"
+                        android:hint="Business Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/ui_18_dp"
+                        android:textSize="@dimen/text_14_sp" />
+
+                    <ImageView
+                        android:id="@+id/bNameInfo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/ui_12_dp"
+                        app:srcCompat="@drawable/ic_info_blue" />
+
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/businessEmailEditText"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="Business Email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bNameLayout" />
+
+                <RelativeLayout
+                    android:id="@+id/businessNumberEditTextRL"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/businessEmailEditText">
+
+
+                    <TextView
+                        android:id="@+id/txtcc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:text="+61" />
+                    <EditText
+                        android:id="@+id/businessNumberEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ui_45_dp"
+                        android:background="@drawable/complete_gray_round_background"
+                        android:hint="Business Number"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/txtcc"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingStart="@dimen/ui_8_dp"
+                        android:textSize="@dimen/text_14_sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/bLocationLayout"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/businessNumberEditTextRL">
+
+                    <EditText
+                        android:id="@+id/businessLocationEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ui_45_dp"
+                        android:layout_toStartOf="@id/bLocationInfo"
+                        android:background="@null"
+                        android:hint="Business Location"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/ui_18_dp"
+                        android:textSize="@dimen/text_14_sp" />
+
+                    <ImageView
+                        android:id="@+id/bLocationInfo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/ui_12_dp"
+                        app:srcCompat="@drawable/ic_info_blue" />
+
+                </RelativeLayout>
+                <EditText
+                    android:id="@+id/taxIdEditText"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="Business Tax ID"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bLocationLayout" />
+                <LinearLayout
+                    android:id="@+id/documentLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_20_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/taxIdEditText">
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/incorporationDoc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/all_square_rounded_yellow_background"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:text="Incorporation Documents"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/text_10_sp" />
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/txtNoFileAdded"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:text="No File Added"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="@dimen/text_11_sp" />
+
+                </LinearLayout>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/paymentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:paddingBottom="180dp">
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:id="@+id/txtOperatingDays"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_20_dp"
+                    android:layout_marginLeft="@dimen/ui_25_dp"
+                    android:gravity="left"
+                    android:text="Operating Days and Hours"
+                    android:textSize="@dimen/text_12_sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/weekDaysRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_20_dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtOperatingDays"
+                    tools:itemCount="7"
+                    tools:listitem="@layout/week_days_item_layout"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/workingLayout"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_20_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/weekDaysRecyclerView">
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/operationFrom"
+                        android:layout_width="@dimen/ui_0_dp"
+                        android:layout_height="@dimen/ui_45_dp"
+                        android:layout_marginEnd="@dimen/ui_5_dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/complete_gray_round_background"
+                        android:gravity="center"
+                        android:text="Operating From"
+                        android:textSize="@dimen/text_13_sp" />
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/operationTo"
+                        android:layout_width="@dimen/ui_0_dp"
+                        android:layout_height="@dimen/ui_45_dp"
+                        android:layout_marginStart="@dimen/ui_5_dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/complete_gray_round_background"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="Operating Till"
+                        android:textSize="@dimen/text_13_sp" />
+
+                </LinearLayout>
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:id="@+id/txtPaymentDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_20_dp"
+                    android:layout_marginLeft="@dimen/ui_25_dp"
+                    android:gravity="left"
+                    android:text="Payment Details"
+                    android:textSize="@dimen/text_12_sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/workingLayout" />
+                <EditText
+                    android:id="@+id/bsbNumberEditText"
+                    android:layout_width="@dimen/ui_0_dp"
+
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_25_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="BSB Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPaymentDetails"/>
+
+                <EditText
+                    android:id="@+id/accountNumberEditText"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="Account Number"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bsbNumberEditText" />
+                <EditText
+                    android:id="@+id/mccEditText"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="MCC"
+                    android:ems="4"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/accountNumberEditText"
+                    android:visibility="gone"/>
+                <EditText
+                    android:id="@+id/productDescriptionEditText"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="Product Description"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mccEditText" />
+                <EditText
+                    android:id="@+id/urlEditText"
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_45_dp"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:background="@drawable/complete_gray_round_background"
+                    android:hint="Company URL"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/ui_18_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productDescriptionEditText" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lytSignupButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/ui_5_dp">
+        <devx.app.licensee.common.custumViews.YellowBoldBtn
+            android:id="@+id/createAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_30_dp"
+            android:layout_marginTop="@dimen/ui_30_dp"
+            android:layout_marginEnd="@dimen/ui_30_dp"
+            android:layout_marginBottom="@dimen/ui_12_dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/ui_12_dp"
+            android:text="NEXT"
+            tools:background="@color/themeDark"
+            tools:ignore="MissingConstraints" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ui_12_dp"
+            android:background="@drawable/circle_complete_light_transparent_round_backgrnd"
+            android:padding="@dimen/ui_7_dp"
+            app:layout_constraintBottom_toBottomOf="@id/createAccount"
+            app:layout_constraintEnd_toEndOf="@id/createAccount"
+            app:layout_constraintTop_toTopOf="@id/createAccount">
+
+            <ImageView
+                android:layout_width="@dimen/ui_15_dp"
+                android:layout_height="@dimen/ui_15_dp"
+                app:srcCompat="@drawable/ic_arrow_forward_white_24dp" />
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginStart="@dimen/ui_15_dp"
+    android:layout_marginTop="@dimen/ui_10_dp"
+    android:layout_marginEnd="@dimen/ui_15_dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:background="@drawable/round_square_white_background">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" >
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/trailerImage"
+        android:layout_width="@dimen/ui_80_dp"
+        android:layout_height="@dimen/ui_80_dp"
+        android:layout_marginStart="@dimen/ui_12_dp"
+        android:layout_marginTop="@dimen/ui_12_dp"
+        android:layout_marginBottom="@dimen/ui_12_dp"
+        android:scaleType="fitXY"
+        android:src="@color/shimmerColor"
+        app:riv_corner_radius="@dimen/ui_8_dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@+id/trailerImage"
+        android:layout_centerVertical="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/notificationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_12_dp"
+                android:layout_marginEnd="@dimen/ui_5_dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_13_sp"
+                android:layout_centerVertical="true"/>
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/remainingTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/ui_5_dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/red"
+                android:textSize="@dimen/text_13_sp"/>
+        </RelativeLayout>
+
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/trailerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_12_dp"
+            android:layout_marginEnd="@dimen/ui_5_dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_11_sp"/>
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

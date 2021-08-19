@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="devx.app.licensee">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".common.TrailerApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="q">
+
+        <service
+            android:name=".common.services.SignalSenderService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".modules.editTrailer.RentalHistoryActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.insurance.InsuranceListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.signup.VerifyTokenActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.home.requesttab.RequestInvoiceDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".modules.home.requesttab.RequestApproveActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.addBooking.AddBookingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".modules.PdfViewerActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".modules.addtrailer.AddTrailerServicingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.addtrailer.AddTrailerInsuranceActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.addtrailer.SelectUpSellItemActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".modules.editTrailer.TrailerChargesActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <!--
+<meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="${crashlyticsCollectionEnabled}" />
+        -->
+        <activity
+            android:name=".modules.trailerTracking.TrailerTrackingActivity"
+            android:label="@string/title_activity_trailer_tracking"
+            android:screenOrientation="portrait" />
+        <activity android:name=".modules.home.profiletab.ChangePasswordActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.financial.FinancialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.editTrailer.TrailerDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".modules.inviteEmployees.InviteEmployeesActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.login.forgotPassword.ForgotPasswordActivity"
+            android:screenOrientation="portrait"/> <!-- <activity android:name="devx.app.seller.modules.search.SearchTrailerActivity" /> -->
+        <activity android:name="devx.app.seller.modules.rentals.TrailerRentalCompleteActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="devx.app.seller.modules.rentals.book.cancel.CancelTrailerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.home.profiletab.ProfileEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="devx.app.seller.modules.rentals.pay.PayActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".modules.ezphotopicker.ui.PhotoIntentHelperActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:value="PhotoIntentHelperActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="devx.app.seller.modules.home.hometab.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="devx.app.seller.modules.signup.SignUpActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
+        <activity android:name="devx.app.seller.modules.login.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="devx.app.seller.modules.splash.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="devx.app.seller.modules.rentals.book.RentalBookingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="devx.app.seller.modules.rentals.book.upsell.RentalUpsellItemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".modules.addtrailer.AddTrailerActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".modules.addtrailer.EditTrailerActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".modules.addUpSellItem.AddUpSellItemActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".modules.signup.VerifyOTPActivity"
+            android:screenOrientation="portrait" />
+        <service
+            android:name=".modules.firebase.MyFirebaseNotificationService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name=".modules.ezphotopicker.storage.PhotoIntentContentProvider"
+            android:authorities="${applicationId}.ezphotopicker.provider"
+            android:enabled="true"
+            android:exported="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

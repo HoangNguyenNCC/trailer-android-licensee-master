@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/ui_10_dp"
+    android:background="@drawable/round_square_white_background"
+    android:foreground="?attr/selectableItemBackground">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/trailerImage"
+        android:layout_width="@dimen/ui_50_dp"
+        android:layout_height="@dimen/ui_40_dp"
+        android:layout_marginStart="@dimen/ui_12_dp"
+        android:layout_marginTop="@dimen/ui_12_dp"
+        android:layout_marginBottom="@dimen/ui_12_dp"
+        android:background="@color/shimmerColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/ui_8_dp"/>
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/trailerName"
+        android:layout_width="@dimen/ui_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_12_dp"
+        android:layout_marginEnd="@dimen/ui_5_dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_13_sp"
+        app:layout_constraintBottom_toBottomOf="@id/trailerImage"
+        app:layout_constraintEnd_toStartOf="@id/earningAmount"
+        app:layout_constraintStart_toEndOf="@id/trailerImage"
+        app:layout_constraintTop_toTopOf="@id/trailerImage" />
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/earningAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ui_12_dp"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_13_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

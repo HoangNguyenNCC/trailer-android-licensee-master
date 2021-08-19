@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFEFD"
+    tools:context=".modules.addtrailer.AddTrailerInsuranceActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/ui_10_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <include
+                android:id="@+id/topBar"
+                layout="@layout/common_topbar_notitle_transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_3_dp"
+                android:text="Add Servicing"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_20_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRAILERS TO YOU"
+                android:textColor="@color/cancel_btn"
+                android:textSize="@dimen/text_12_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView1" />
+            <ImageView
+                android:id="@+id/trailerImage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginStart="@dimen/ui_5_dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/ui_5_dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView"
+                app:srcCompat="@color/shimmerColor" />
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/trailerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_10_dp"
+                android:textColor="@color/light_black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/trailerImage"
+                android:visibility="visible"/>
+
+            <LinearLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_15_dp"
+                android:background="@drawable/all_rounded_light_grey_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trailerName">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="NAME"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/servicingName"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:background="@null"
+                    android:maxLines="1"
+                    android:hint="Enter Service Name"
+                    android:imeOptions="actionDone"
+                    android:padding="@dimen/ui_10_dp"
+                    android:inputType="text"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/serviceDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_20_dp"
+                android:background="@drawable/all_rounded_light_grey_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameLayout">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="SERVICE DATE"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/servicingIssueDate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:padding="@dimen/ui_10_dp"
+                    android:hint="Select Date"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nextDateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_20_dp"
+                android:background="@drawable/all_rounded_light_grey_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/serviceDateLayout">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="NEXT DATE"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/servicingExpiryDate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:maxLines="1"
+                    android:padding="@dimen/ui_10_dp"
+                    android:hint="Select Date"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/documentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_20_dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nextDateLayout">
+
+                <devx.app.licensee.common.custumViews.RegularTextView
+                    android:id="@+id/insuranceDocument"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/all_square_rounded_yellow_background"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="Servicing Document"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_11_sp" />
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/txtNoFileAdded"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="No File Added"
+                    android:textColor="@color/c2_dark2_grey"
+                    android:textSize="@dimen/text_11_sp" />
+
+            </LinearLayout>
+
+            <devx.app.licensee.common.custumViews.YellowBoldBtn
+                android:id="@+id/addServicing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ui_25_dp"
+                android:layout_marginTop="@dimen/ui_15_dp"
+                android:paddingStart="@dimen/ui_20_dp"
+                android:paddingTop="@dimen/ui_9_dp"
+                android:paddingEnd="@dimen/ui_20_dp"
+                android:paddingBottom="@dimen/ui_9_dp"
+                android:text="Add Servicing"
+                android:textSize="@dimen/text_12_sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/documentLayout"
+                tools:background="@drawable/complete_yellow_round_background" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

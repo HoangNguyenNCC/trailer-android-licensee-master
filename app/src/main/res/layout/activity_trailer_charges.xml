@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFEFD"
+    tools:context=".modules.editTrailer.TrailerChargesActivity">
+
+    <include
+        android:id="@+id/topBar"
+        layout="@layout/common_topbar_notitle_transparent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/topBar">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/rTopT1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SCHEDULE OF CHARGES"
+                android:textColor="@color/light_black"
+                android:textSize="22sp"
+                android:layout_marginTop="@dimen/ui_10_dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center_horizontal"/>
+            <RelativeLayout
+                android:id="@+id/select"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ui_10_dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ui_15_dp"
+                    android:background="@drawable/rounded_white_small_corner_gray">
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/txtStartDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/ui_15_dp"
+                        android:textSize="@dimen/text_12_sp"
+                        android:textColor="@color/black"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:text="-"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:textStyle="bold"/>
+                    <devx.app.licensee.common.custumViews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TO"
+                        android:padding="@dimen/ui_10_dp"
+                        android:textSize="@dimen/text_12_sp"
+                        android:textColor="@color/black"
+                        android:background="@null"
+                        android:layout_centerInParent="true"/>
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/txtEndDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/ui_15_dp"
+                        android:textSize="@dimen/text_12_sp"
+                        android:textColor="@color/black"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:text="-"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:textStyle="bold"/>
+
+                </RelativeLayout>
+
+                <devx.app.licensee.common.custumViews.RegularTextView
+                    android:id="@+id/txtSelectDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/all_square_rounded_yellow_background"
+                    android:padding="@dimen/ui_5_dp"
+                    android:text="Select Date &amp; Time"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_12_sp"
+                    android:textAllCaps="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rTopT1"
+                android:layout_marginTop="@dimen/ui_10_dp">
+
+                <LinearLayout
+                    android:id="@+id/Lyt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Rental Charges"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:id="@+id/txtrentalCharges"
+                        android:layout_width="150dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:text="0 AUD"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="16sp"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Lyt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Taxes"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:id="@+id/txtTaxes"
+                        android:layout_width="150dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="16sp"
+                        android:gravity="right"
+                        android:text="0 AUD"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Lyt3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Damage Waiver"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:id="@+id/txtdamageWaiver"
+                        android:layout_width="150dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="16sp"
+                        android:gravity="right"
+                        android:text="0 AUD"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/Lyt4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total Charges"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"/>
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:id="@+id/txttotalCharges"
+                        android:layout_width="150dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="16sp"
+                        android:gravity="right"
+                        android:text="0 AUD"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+      <!--  <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/rTopT1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCHEDULE OF CHARGES"
+                android:textColor="@color/light_black"
+                android:textSize="22sp"
+                android:layout_marginTop="@dimen/ui_30_dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/trailerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Item Charges"
+                android:textColor="@color/themeGrey"
+                android:textSize="@dimen/text_12_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rTopT1" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_20_dp"
+                android:layout_marginEnd="@dimen/ui_15_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/trailerName">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ui_15_dp"
+                        android:layout_marginTop="@dimen/ui_15_dp"
+                        android:text="TRAILER RENT DURATION"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/text_10_sp" />
+
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ui_15_dp"
+                        android:layout_marginTop="@dimen/ui_15_dp"
+                        android:layout_marginEnd="@dimen/ui_15_dp"
+                        android:progress="0" />
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/daysCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/ui_30_dp"
+                        android:layout_marginBottom="@dimen/ui_20_dp"
+                        android:text="0 Days"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/text_17_sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_30_dp"
+                android:text="INCOME FROM TRAILER : PICKUP"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_11_sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/trailerIncomePickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_30_dp"
+                android:text="0 AUD"
+                android:textColor="@color/light_black"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text1" />
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_30_dp"
+                android:text="INCOME FROM TRAILER : DELIVERY"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_11_sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/trailerIncomePickup" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/trailerIncomeDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_30_dp"
+                android:text="0 AUD"
+                android:textColor="@color/light_black"
+                android:textSize="28sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

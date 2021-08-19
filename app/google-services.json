@@ -1,0 +1,135 @@
+{
+  "project_info": {
+    "project_number": "356881715848",
+    "firebase_url": "https://trailer2you-7a9da.firebaseio.com",
+    "project_id": "trailer2you-7a9da",
+    "storage_bucket": "trailer2you-7a9da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356881715848:android:018055826fa73fc52a453d",
+        "android_client_info": {
+          "package_name": "com.applutions.t2y"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356881715848-csf46pom4g2faie2mqhs8gvfibhmfcgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhK8wA8WVQbEqcVZyAVaxYM1kaoIp2jys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356881715848-csf46pom4g2faie2mqhs8gvfibhmfcgp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "356881715848-f5vckgsm2gs0jo6n48uboogi9nhmoa1o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.applutions.Trailer2You"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356881715848:android:927939c4ded998442a453d",
+        "android_client_info": {
+          "package_name": "devx.app.licensee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356881715848-fkd3anshb0hhmeg8i881cc53c85m2a29.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "devx.app.licensee",
+            "certificate_hash": "fc68bb0ba71ec268799bf84d32e85d079786d17e"
+          }
+        },
+        {
+          "client_id": "356881715848-o1i25uinnasjelsjg38ol0mvlh1lf375.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "devx.app.licensee",
+            "certificate_hash": "3b07b16674f98e8da6e8f28e2310dc9ae556b315"
+          }
+        },
+        {
+          "client_id": "356881715848-csf46pom4g2faie2mqhs8gvfibhmfcgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhK8wA8WVQbEqcVZyAVaxYM1kaoIp2jys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356881715848-csf46pom4g2faie2mqhs8gvfibhmfcgp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "356881715848-f5vckgsm2gs0jo6n48uboogi9nhmoa1o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.applutions.Trailer2You"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356881715848:android:fb87f5930fdf92782a453d",
+        "android_client_info": {
+          "package_name": "devx.app.seller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356881715848-csf46pom4g2faie2mqhs8gvfibhmfcgp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhK8wA8WVQbEqcVZyAVaxYM1kaoIp2jys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356881715848-csf46pom4g2faie2mqhs8gvfibhmfcgp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "356881715848-f5vckgsm2gs0jo6n48uboogi9nhmoa1o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.applutions.Trailer2You"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

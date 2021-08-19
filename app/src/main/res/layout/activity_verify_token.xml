@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".modules.signup.VerifyOTPActivity">
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="@dimen/ui_32_dp"
+        android:layout_height="@dimen/ui_32_dp"
+        android:layout_marginStart="@dimen/ui_32_dp"
+        android:layout_marginTop="@dimen/ui_35_dp"
+        android:background="@drawable/complete_gray_round_background"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="@dimen/ui_7_dp"
+        app:srcCompat="@drawable/quantum_ic_arrow_back_grey600_24" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/verifyTokenLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:text="Verify TOKEN"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_20_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trailer2You"
+            android:textColor="@color/themeGrey"
+            android:textSize="@dimen/text_11_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text" />
+        <EditText
+            android:id="@+id/edtToken"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="@dimen/ui_45_dp"
+            android:layout_marginStart="@dimen/ui_25_dp"
+            android:layout_marginTop="@dimen/ui_25_dp"
+            android:layout_marginEnd="@dimen/ui_25_dp"
+            android:background="@drawable/complete_gray_round_background"
+            android:hint="Enter Token"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:paddingStart="@dimen/ui_18_dp"
+            android:textSize="@dimen/text_14_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtHeaderTitle"/>
+
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/verifyToken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_40_dp"
+            android:background="@drawable/complete_yellow_round_background"
+            android:paddingStart="@dimen/ui_25_dp"
+            android:paddingTop="@dimen/ui_8_dp"
+            android:paddingEnd="@dimen/ui_25_dp"
+            android:paddingBottom="@dimen/ui_8_dp"
+            android:text="VERIFY TOKEN"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_14_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtToken" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="@dimen/ui_90_dp"
+            android:layout_height="@dimen/ui_90_dp"
+            android:layout_marginTop="200dp"
+            android:src="@drawable/profile_verified_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Success"
+            android:textColor="@color/themeDark"
+            android:textSize="@dimen/text_16_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon" />
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YOUR TOKEN IS VERIFIED"
+            android:textColor="@color/themeLight"
+            android:textSize="@dimen/text_12_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_large_top_corner_white">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/commonBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/ui_20_dp"
+        android:layout_marginTop="@dimen/ui_20_dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="@dimen/back_btn_padding"
+        android:scaleType="centerInside"
+        android:src="@drawable/back_black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/txtPermissions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ui_60_dp"
+        android:text="Permissions"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_17_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TRAILER2YOU"
+        android:textColor="@color/themeGrey"
+        android:textSize="@dimen/text_11_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPermissions" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/invitePermissionsRecyclerView"
+        android:layout_width="@dimen/ui_0_dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/ui_20_dp"
+        android:layout_marginBottom="@dimen/ui_10_dp"
+        android:background="#FDFDFD"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/ui_20_dp"
+        android:paddingEnd="@dimen/ui_20_dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/doneButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appName" />
+
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/doneButton"
+        android:layout_width="@dimen/ui_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_50_dp"
+        android:layout_marginEnd="@dimen/ui_50_dp"
+        android:layout_marginBottom="@dimen/ui_20_dp"
+        android:layout_marginTop="@dimen/ui_10_dp"
+        android:background="@drawable/complete_yellow_round_background"
+        android:gravity="center"
+        android:paddingTop="@dimen/ui_6_dp"
+        android:paddingBottom="@dimen/ui_6_dp"
+        android:text="Done"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_15_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/invitePermissionsRecyclerView"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

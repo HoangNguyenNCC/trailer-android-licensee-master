@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".modules.home.profiletab.ProfileEditActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/ui_10_dp"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/topBar"
+            layout="@layout/common_topbar_notitle_transparent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        tools:context=".modules.signup.SignupActivity"
+        android:visibility="visible"
+        android:layout_marginStart="@dimen/ui_10_dp"
+        android:layout_marginEnd="@dimen/ui_10_dp">
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_20_dp"
+            android:text="Your Profile"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ui_20_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/nameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:text="Hello There!"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/ui_14_dp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userProfileImageView"
+            android:layout_width="@dimen/ui_80_dp"
+            android:layout_height="@dimen/ui_80_dp"
+            android:layout_marginTop="@dimen/ui_35_dp"
+            android:src="@drawable/grey_account_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameLayout"/>
+
+
+        <RelativeLayout
+            android:id="@+id/fullNameLayout"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:layout_marginEnd="@dimen/ui_10_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userProfileImageView">
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/nameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_5_dp"
+                android:text="NAME"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/ui_14_dp"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingTop="@dimen/ui_15_dp"
+                android:paddingBottom="@dimen/ui_15_dp"
+                android:paddingEnd="@dimen/ui_15_dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14_sp"
+                android:layout_below="@+id/nameLabel"/>
+
+            <ImageView
+                android:id="@+id/fullNameInfo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/ui_12_dp"
+                app:srcCompat="@drawable/ic_info_blue"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="@dimen/ui_45_dp"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:layout_marginEnd="@dimen/ui_10_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fullNameLayout"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/titleEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ui_45_dp"
+                android:layout_toStartOf="@id/titleInfo"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingStart="@dimen/ui_18_dp"
+                android:textSize="@dimen/text_14_sp"
+                android:textColor="@color/black"
+                />
+
+            <ImageView
+                android:id="@+id/titleInfo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/ui_12_dp"
+                app:srcCompat="@drawable/ic_info_blue"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/addressLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:text="ADDRESS"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/ui_14_dp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fullNameLayout"
+            android:gravity="start"/>
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/userAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/ui_15_dp"
+            android:paddingBottom="@dimen/ui_15_dp"
+            android:paddingEnd="@dimen/ui_15_dp"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:layout_marginEnd="@dimen/ui_10_dp"
+            android:textSize="@dimen/text_14_sp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:background="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addressLabel"/>
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/mobileLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:text="MOBILE"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/ui_14_dp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userAddress"
+            android:gravity="start"/>
+            <EditText
+                android:id="@+id/userMobileNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_10_dp"
+                android:layout_marginTop="@dimen/ui_10_dp"
+                android:layout_marginEnd="@dimen/ui_10_dp"
+                android:background="@null"
+                android:clickable="false"
+                android:editable="false"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:paddingTop="@dimen/ui_15_dp"
+                android:paddingBottom="@dimen/ui_15_dp"
+                android:paddingEnd="@dimen/ui_15_dp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_14_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mobileLabel" />
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/emailLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:text="EMAIL"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/ui_14_dp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userMobileNumber"
+            android:gravity="start"/>
+        <EditText
+            android:id="@+id/userEmailAddress"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:layout_marginEnd="@dimen/ui_10_dp"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:paddingTop="@dimen/ui_15_dp"
+            android:paddingBottom="@dimen/ui_15_dp"
+            android:paddingEnd="@dimen/ui_15_dp"
+            android:textSize="@dimen/text_14_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailLabel"
+            android:textColor="@color/black"
+            android:background="@null"
+            android:editable="false"
+            android:clickable="false" />
+
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/dobLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:text="DATE OF BIRTH"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/ui_14_dp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userEmailAddress"
+            android:gravity="start"/>
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/userDOB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_10_dp"
+                android:layout_marginTop="@dimen/ui_10_dp"
+                android:layout_marginEnd="@dimen/ui_10_dp"
+                android:textSize="@dimen/text_14_sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:background="@null"
+                android:paddingTop="@dimen/ui_15_dp"
+                android:paddingBottom="@dimen/ui_15_dp"
+                android:paddingEnd="@dimen/ui_15_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dobLabel"/>
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/drivingLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:text="Driving License"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/ui_14_dp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userDOB"
+            android:gravity="start"/>
+        <EditText
+            android:id="@+id/addDrivingLicenseEditText"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="@dimen/ui_45_dp"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:layout_marginEnd="@dimen/ui_10_dp"
+            android:hint="Add Driving License"
+            android:paddingTop="@dimen/ui_15_dp"
+            android:paddingBottom="@dimen/ui_15_dp"
+            android:paddingEnd="@dimen/ui_15_dp"
+            android:textSize="@dimen/text_14_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/black"
+            android:background="@null"
+            app:layout_constraintTop_toBottomOf="@id/drivingLabel"
+            android:visibility="visible"/>
+        <LinearLayout
+            android:id="@+id/additionalDocumentLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_35_dp"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:layout_marginEnd="@dimen/ui_35_dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/addDrivingLicenseEditText">
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/additionalDocumentText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/all_square_rounded_yellow_background"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:text="Additional Proofs"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_10_sp" />
+            <ImageView
+                android:id="@+id/infoAdditionalDocument"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/ui_5_dp"
+                app:srcCompat="@drawable/ic_info_blue" />
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/additionalDocumentLayoutTxtNoFileAdded"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:text="No File Added"
+                android:textColor="@color/c2_dark2_grey"
+                android:textSize="@dimen/text_11_sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:layout_marginEnd="@dimen/ui_10_dp"
+            android:orientation="horizontal"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@id/additionalDocumentLayout">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_15_dp"
+                    android:layout_marginTop="@dimen/ui_16_dp"
+                    android:text="Driving License"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_13_sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ui_150_dp"
+                    android:layout_margin="@dimen/ui_10_dp"
+                    android:background="@color/shimmerColor"
+                    android:elevation="@dimen/ui_3_dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lytAdditionalProof"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_15_dp"
+                    android:layout_marginTop="@dimen/ui_16_dp"
+                    android:text="Additional Document"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_13_sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ui_150_dp"
+                    android:layout_margin="@dimen/ui_10_dp"
+                    android:background="@drawable/ic_document"
+                    android:elevation="@dimen/ui_3_dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/businessDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginEnd="@dimen/ui_15_dp" >
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_20_dp"
+                    android:text="Hello, You"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ui_20_dp"
+                    android:layout_gravity="center_horizontal"/>
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_5_dp"
+                    android:text="Edit Licensee"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ui_14_dp"
+                    android:layout_gravity="center_horizontal"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/businessProfileImageView"
+                    android:layout_width="@dimen/ui_80_dp"
+                    android:layout_height="@dimen/ui_80_dp"
+                    android:layout_marginTop="@dimen/ui_35_dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:src="@color/shimmerColor"
+                    android:layout_gravity="center_horizontal"/>
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Business Name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ui_14_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginStart="@dimen/ui_15_dp"/>
+                <EditText
+                    android:id="@+id/businessNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="@dimen/ui_15_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    android:background="@null"
+                    android:textColor="@color/black"/>
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Business Email"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ui_14_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginStart="@dimen/ui_15_dp"/>
+                <EditText
+                    android:id="@+id/businessEmailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/ui_15_dp"
+                    android:textSize="@dimen/text_14_sp"/>
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Business Mobile"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ui_14_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginStart="@dimen/ui_15_dp"/>
+                <EditText
+                    android:id="@+id/businessNumberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14_sp"
+                    android:layout_centerVertical="true"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="@dimen/ui_15_dp"/>
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BSB Number"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ui_14_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginStart="@dimen/ui_15_dp"/>
+                <EditText
+                    android:id="@+id/bsbNumberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="@dimen/ui_15_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    android:background="@null"
+                    android:ems="6"
+                    android:textColor="@color/black"/>
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account Number"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ui_14_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginStart="@dimen/ui_15_dp"/>
+                <EditText
+                    android:id="@+id/accountNumberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:padding="@dimen/ui_15_dp"
+                    android:textSize="@dimen/text_14_sp"
+                    android:ems="4" />
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tax ID"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ui_14_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginStart="@dimen/ui_15_dp"/>
+                <EditText
+                    android:id="@+id/taxIDEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:padding="@dimen/ui_15_dp"
+                    android:textSize="@dimen/text_14_sp"/>
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Working Hours"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ui_14_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginStart="@dimen/ui_15_dp"/>
+                <LinearLayout
+                    android:id="@+id/workingLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/operationFrom"
+                        android:layout_width="@dimen/ui_0_dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/ui_5_dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="@color/black"
+                        android:gravity="start"
+                        android:textSize="@dimen/text_13_sp"
+                        android:padding="@dimen/ui_15_dp"/>
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/operationTo"
+                        android:layout_width="@dimen/ui_0_dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/ui_5_dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="@color/black"
+                        android:gravity="end"
+                        android:textSize="@dimen/text_13_sp"
+                        android:padding="@dimen/ui_15_dp" />
+                </LinearLayout>
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Working Days"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ui_14_dp"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginStart="@dimen/ui_15_dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/weekDaysRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_15_dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="7"
+                    tools:listitem="@layout/week_days_item_layout" />
+
+                <LinearLayout
+                    android:id="@+id/documentLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_25_dp"
+                    android:layout_marginTop="@dimen/ui_20_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:orientation="horizontal"
+
+                    android:visibility="gone">
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/incorporationDoc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/all_square_rounded_yellow_background"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:text="Incorporation Documents"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/text_10_sp" />
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:id="@+id/txtNoFileAdded"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:text="No File Added"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="@dimen/text_11_sp" />
+
+                </LinearLayout>
+
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/showincorporationDoc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/all_square_rounded_yellow_background"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:text="View Incorporation Documents"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_10_sp"
+                    android:layout_marginTop="@dimen/ui_15_dp"/>
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Business Address"
+                    android:textAllCaps="true"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ui_14_dp"
+                    android:layout_marginTop="@dimen/ui_15_dp"
+                    android:layout_marginStart="@dimen/ui_15_dp"/>
+                <devx.app.licensee.common.custumViews.RegularTextView
+                    android:id="@+id/businessLocationEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_14_sp"
+                    android:text="Business Address"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/ui_15_dp"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_nav_icon"
+                    android:drawablePadding="@dimen/ui_5_dp"
+                    />
+            </LinearLayout>
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ui_30_dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/lytVerfication">
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/txtVerifyMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/ui_15_dp"
+                android:paddingTop="@dimen/ui_10_dp"
+                android:paddingEnd="@dimen/ui_15_dp"
+                android:paddingBottom="@dimen/ui_10_dp"
+                android:textColor="@color/black"
+                android:text="Verfiy Mobile"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:layout_weight="1"
+                android:background="@drawable/all_rounded_grey_background"
+                android:layout_marginRight="@dimen/ui_2_dp"/>
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/txtVerifyEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/ui_15_dp"
+                android:paddingTop="@dimen/ui_10_dp"
+                android:paddingEnd="@dimen/ui_15_dp"
+                android:paddingBottom="@dimen/ui_10_dp"
+                android:textColor="@color/black"
+                android:text="Verfiy Email"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/ui_2_dp"
+                android:background="@drawable/all_rounded_grey_background"/>
+        </LinearLayout>
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtChangePwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/ui_15_dp"
+            android:paddingTop="@dimen/ui_10_dp"
+            android:paddingEnd="@dimen/ui_15_dp"
+            android:paddingBottom="@dimen/ui_10_dp"
+            android:textColor="@color/black"
+            android:text="Change Password"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:background="@drawable/all_rounded_grey_background"
+            android:layout_marginBottom="@dimen/ui_5_dp"
+            android:layout_marginTop="@dimen/ui_10_dp"/>
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/saveProfileInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:paddingStart="@dimen/ui_15_dp"
+            android:paddingTop="@dimen/ui_10_dp"
+            android:paddingEnd="@dimen/ui_15_dp"
+            android:paddingBottom="@dimen/ui_10_dp"
+            android:textColor="@color/black"
+            android:text="Save"
+            android:textAllCaps="true"
+            android:gravity="center"
+            android:background="@drawable/btn_yellow"
+            android:layout_marginBottom="@dimen/ui_10_dp"
+            android:layout_marginTop="@dimen/ui_5_dp"/>
+
+
+    </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+ <RelativeLayout
+            android:id="@+id/userCreditCardInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ui_15_dp"
+            android:background="@drawable/complete_white_round_with_doted_stroke"
+            android:foreground="?attr/selectableItemBackground"
+            app:layout_constraintTop_toBottomOf="@id/userDrivingLicenseInfoLayout">
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/txtCreditCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_16_dp"
+                android:text="Credit Card"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_13_sp" />
+
+            <EditText
+                android:id="@+id/creditCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCreditCard"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:background="@null"
+                android:hint="1234567890"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:textSize="@dimen/text_13_sp" />
+
+            <EditText
+                android:id="@+id/payMonthExpiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/creditCardNumber"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:background="@null"
+                android:gravity="end"
+                android:hint="12"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:paddingStart="@dimen/ui_5_dp"
+                android:paddingEnd="@dimen/ui_5_dp"
+                android:textSize="@dimen/text_13_sp" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/creditCardNumber"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_3_dp"
+                android:layout_toEndOf="@id/payMonthExpiry"
+                android:text="/" />
+
+            <EditText
+                android:id="@+id/payYearExpiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/creditCardNumber"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_5_dp"
+                android:layout_marginEnd="@dimen/ui_10_dp"
+                android:layout_toEndOf="@id/divider"
+                android:background="@null"
+                android:gravity="end"
+                android:hint="12"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:paddingStart="@dimen/ui_5_dp"
+                android:paddingEnd="@dimen/ui_5_dp"
+                android:textSize="@dimen/text_13_sp" />
+
+            <EditText
+                android:id="@+id/cvvNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/creditCardNumber"
+                android:layout_marginStart="@dimen/ui_5_dp"
+                android:layout_marginEnd="@dimen/ui_10_dp"
+                android:layout_toEndOf="@id/payYearExpiry"
+                android:background="@null"
+                android:gravity="end"
+                android:hint="..."
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:paddingStart="@dimen/ui_30_dp"
+                android:paddingEnd="@dimen/ui_30_dp"
+                android:textSize="@dimen/text_13_sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/payMonthExpiry"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginBottom="@dimen/ui_15_dp"
+                android:background="@null"
+                android:hint="Adam Sandler"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:textSize="@dimen/text_13_sp" />
+
+            <ImageView
+                android:id="@+id/creditCardImageView"
+                android:layout_width="250dp"
+                android:layout_height="@dimen/ui_150_dp"
+                android:layout_below="@id/txtCreditCard"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_5_dp"
+                android:layout_marginBottom="@dimen/ui_15_dp"
+                android:background="@color/shimmerColor"
+                android:elevation="@dimen/ui_3_dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+-->

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/small_all_rounded_white_background">
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/privilegeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ui_25_dp"
+        android:text="Privilege 1"
+        android:textColor="@color/light_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/closeView"
+        android:layout_width="@dimen/ui_24_dp"
+        android:layout_height="@dimen/ui_24_dp"
+        android:layout_marginEnd="@dimen/ui_20_dp"
+        android:foreground="?attr/selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@id/privilegeName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/privilegeName"
+        app:srcCompat="@drawable/ic_close_grey_black" />
+
+    <LinearLayout
+        android:id="@+id/permissionLayout"
+        android:layout_width="@dimen/ui_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_20_dp"
+        android:layout_marginTop="@dimen/ui_30_dp"
+        android:layout_marginEnd="@dimen/ui_20_dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/privilegeName">
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/addPermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ui_4_dp"
+            android:layout_weight="1"
+            android:background="@drawable/complete_gray_round_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/ui_6_dp"
+            android:text="Add"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_11_sp" />
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/viewPermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_4_dp"
+            android:layout_marginEnd="@dimen/ui_4_dp"
+            android:layout_weight="1"
+            android:background="@drawable/complete_gray_round_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/ui_6_dp"
+            android:text="View"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_11_sp" />
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/updatePermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_4_dp"
+            android:layout_marginEnd="@dimen/ui_4_dp"
+            android:layout_weight="1"
+            android:background="@drawable/complete_gray_round_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/ui_6_dp"
+            android:text="Update"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_11_sp" />
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/deletePermission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_4_dp"
+            android:layout_weight="1"
+            android:background="@drawable/complete_gray_round_background"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/ui_6_dp"
+            android:text="Delete"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_11_sp" />
+
+    </LinearLayout>
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/addPrivilegeButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_20_dp"
+        android:layout_marginTop="@dimen/ui_30_dp"
+        android:layout_marginEnd="@dimen/ui_20_dp"
+        android:layout_marginBottom="@dimen/ui_30_dp"
+        android:background="@drawable/all_square_rounded_yellow_background"
+        android:gravity="center"
+        android:padding="@dimen/ui_12_dp"
+        android:text="Add Privilege"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_13_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/permissionLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

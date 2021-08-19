@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.HBiSoft:PickiT:0.1.10@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/994fa075dc8916210294ae229a4264e7/jetified-PickiT-0.1.10/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/994fa075dc8916210294ae229a4264e7/jetified-PickiT-0.1.10/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/994fa075dc8916210294ae229a4264e7/jetified-PickiT-0.1.10/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.HBiSoft/PickiT/0.1.10/89cfb44ccf81ea0b731c26bd1cbae70c7827d4ef/PickiT-0.1.10-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

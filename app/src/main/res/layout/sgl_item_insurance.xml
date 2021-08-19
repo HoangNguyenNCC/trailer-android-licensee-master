@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/ui_15_dp"
+    android:layout_marginTop="@dimen/ui_10_dp"
+    android:layout_marginEnd="@dimen/ui_15_dp"
+    android:background="@drawable/round_square_white_background">
+
+    <ImageView
+        android:id="@+id/imgDocument"
+        android:layout_width="@dimen/ui_80_dp"
+        android:layout_height="@dimen/ui_80_dp"
+        android:layout_marginStart="@dimen/ui_12_dp"
+        android:layout_marginTop="@dimen/ui_12_dp"
+        android:layout_marginBottom="@dimen/ui_12_dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@drawable/ic_document" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_toEndOf="@+id/imgDocument"
+    android:layout_centerVertical="true">
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/txtTrailerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_13_sp"
+        android:paddingTop="@dimen/ui_5_dp"
+        android:paddingRight="@dimen/ui_5_dp"/>
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/txtServiceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/c2_dark1_grey"
+        android:textSize="@dimen/text_11_sp"
+        android:paddingRight="@dimen/ui_5_dp"
+        android:paddingTop="@dimen/ui_5_dp"
+        app:layout_constraintHorizontal_bias="0.0" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtLbltxtIssueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Issue Date:"
+            android:textColor="@color/c2_dark1_grey"
+            android:textSize="@dimen/text_11_sp"
+            android:paddingTop="@dimen/ui_5_dp"
+            android:paddingRight="@dimen/ui_5_dp"/>
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtIssueDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/c2_dark1_grey"
+            android:textSize="@dimen/text_11_sp"
+            android:paddingStart="@dimen/ui_5_dp"
+            android:paddingTop="@dimen/ui_5_dp"
+            android:paddingRight="@dimen/ui_5_dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtLblExpiryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Expiry Date:"
+            android:textColor="@color/c2_dark1_grey"
+            android:textSize="@dimen/text_11_sp"
+            android:paddingTop="@dimen/ui_5_dp"
+            android:paddingRight="@dimen/ui_5_dp"
+            android:paddingBottom="@dimen/ui_5_dp"/>
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtExpiryDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/c2_dark1_grey"
+            android:textSize="@dimen/text_11_sp"
+            android:padding="@dimen/ui_5_dp"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+
+</RelativeLayout>

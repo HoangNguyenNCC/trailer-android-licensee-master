@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ui_2_dp"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    tools:background="@drawable/complete_yellow_round_background"
+    tools:padding="@dimen/ui_3_dp">
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/weekName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="M"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

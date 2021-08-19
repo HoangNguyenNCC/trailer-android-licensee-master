@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    tools:context=".modules.home.requesttab.RequestInvoiceDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/topBar"
+            layout="@layout/common_topbar_notitle_transparent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/userDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ui_10_dp"
+            tools:ignore="MissingConstraints">
+
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_30_dp"
+                android:text="Rental"
+                android:textColor="@color/black"
+                android:textSize="@dimen/ui_20_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/nameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rental Details"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/ui_14_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameLayout"
+                android:layout_margin="@dimen/ui_10_dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/mapCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginStart="@dimen/ui_10_dp"
+                    android:layout_marginTop="@dimen/ui_20_dp"
+                    android:layout_marginEnd="@dimen/ui_15_dp"
+                    android:layout_marginBottom="@dimen/ui_5_dp"
+                    app:cardCornerRadius="@dimen/ui_8_dp">
+
+                    <fragment
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </androidx.cardview.widget.CardView>
+                <devx.app.licensee.common.custumViews.RegularTextView
+                    android:id="@+id/txtCustomerAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:padding="@dimen/ui_15_dp"
+                    android:layout_margin="@dimen/ui_10_dp"
+                    android:textSize="@dimen/text_12_sp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black"
+                    android:drawableLeft="@drawable/ic_nav_icon"
+                    android:drawablePadding="@dimen/ui_8_dp"
+                    android:background="@drawable/rounded_white_small_corner_gray"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_10_dp"
+                    android:layout_marginBottom="@dimen/ui_10_dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/ui_15_dp"
+                        android:background="@drawable/rounded_white_small_corner_gray">
+                        <devx.app.licensee.common.custumViews.BoldTextView
+                            android:id="@+id/txtRentalStartDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/ui_15_dp"
+                            android:textSize="@dimen/text_12_sp"
+                            android:textColor="@color/black"
+                            android:background="@null"
+                            android:gravity="left"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:textStyle="bold"/>
+                        <devx.app.licensee.common.custumViews.RegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TO"
+                            android:padding="@dimen/ui_10_dp"
+                            android:textSize="@dimen/text_12_sp"
+                            android:textColor="@color/black"
+                            android:background="@null"
+                            android:layout_centerInParent="true"/>
+                        <devx.app.licensee.common.custumViews.BoldTextView
+                            android:id="@+id/txtRentalEndDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/ui_15_dp"
+                            android:textSize="@dimen/text_12_sp"
+                            android:textColor="@color/black"
+                            android:background="@null"
+                            android:gravity="right"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+                    <devx.app.licensee.common.custumViews.RegularTextView
+                        android:id="@+id/btnShowoiginalDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/all_square_rounded_yellow_background"
+                        android:padding="@dimen/ui_5_dp"
+                        android:text="Show Original Dates"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_12_sp"
+                        android:textAllCaps="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        />
+                </RelativeLayout>
+                <devx.app.licensee.common.custumViews.RegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Please take into consideration the extra time required for pickup and drop beyond the booking timings. Ideally, ~ 2 hours is recommended."
+                    android:textAllCaps="true"
+                    android:padding="@dimen/ui_10_dp"
+                    android:layout_marginStart="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_10_dp"
+                    android:textSize="@dimen/text_10_sp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/themeGrey"
+                    android:background="@null"/>
+                <devx.app.licensee.common.custumViews.RegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Once you confirm the order, the customer will be charged for the whole amount."
+                    android:textAllCaps="true"
+                    android:padding="@dimen/ui_10_dp"
+                    android:layout_marginTop="@dimen/ui_25_dp"
+                    android:layout_marginLeft="@dimen/ui_10_dp"
+                    android:layout_marginBottom="@dimen/ui_5_dp"
+                    android:layout_marginRight="@dimen/ui_10_dp"
+                    android:textSize="@dimen/text_10_sp"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/themeGrey"
+                    android:background="@null"
+                    android:visibility="gone"/>
+
+
+                <devx.app.licensee.common.custumViews.RegularTextView
+                    android:id="@+id/btnApprove"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_10_dp"
+                    android:layout_marginStart="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_10_dp"
+                    android:background="@drawable/all_square_rounded_yellow_background"
+                    android:paddingTop="@dimen/ui_15_dp"
+                    android:paddingBottom="@dimen/ui_15_dp"
+                    android:text="Approve Request"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_12_sp"
+                    android:textAllCaps="true"
+
+                    />
+                <devx.app.licensee.common.custumViews.RegularTextView
+                    android:id="@+id/btnDecline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ui_5_dp"
+                    android:layout_marginStart="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_10_dp"
+                    android:background="@drawable/all_square_rounded_greyy_background"
+                    android:paddingTop="@dimen/ui_15_dp"
+                    android:paddingBottom="@dimen/ui_15_dp"
+                    android:text="Reject Request"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_12_sp"
+                    android:textAllCaps="true"
+                    />
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

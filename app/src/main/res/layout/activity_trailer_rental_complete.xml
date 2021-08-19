@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ui_60_dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/ratingLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="RENTAL COMPLETE"
+            android:textColor="@color/themeLight"
+            android:textSize="@dimen/text_11_sp" />
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="You returned the \n trailer!"
+            android:textColor="@color/themeDark"
+            android:textSize="@dimen/text_17_sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ratingLayout"
+        android:layout_width="@dimen/ui_0_dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtRentalExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="HOW WAS THE EXPERIENCE ?"
+            android:textColor="@color/light_black" />
+
+        <RatingBar
+            android:id="@+id/rentalRatingBar"
+            style="@style/MediumCustomRatingBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtRentalExperience"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/ui_15_dp"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:progressTint="@color/rating_orange"
+            android:rating="0"
+            android:stepSize="0.5" />
+
+    </RelativeLayout>
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/skipRatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ui_40_dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="@dimen/ui_8_dp"
+        android:text="Skip Rating"
+        android:textColor="@color/themeDark"
+        android:textSize="@dimen/text_11_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <devx.app.licensee.common.custumViews.YellowBoldBtn
+        android:id="@+id/sendRenalFeedback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_50_dp"
+        android:layout_marginEnd="@dimen/ui_50_dp"
+        android:layout_marginBottom="@dimen/ui_20_dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:padding="@dimen/ui_12_dp"
+        android:text="Submit Feedback"
+        android:textSize="@dimen/text_12_sp"
+        app:layout_constraintBottom_toTopOf="@id/skipRatingButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_large_top_corner_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <devx.app.licensee.common.custumViews.RegularTextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:padding="6dp"
+            android:text="Select Scan"
+            android:textAlignment="center"
+            android:textColor="@color/dark_gray"
+            android:textStyle="bold"
+            android:textSize="@dimen/ui_14_dp"
+            android:visibility="visible"/>
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/btnUpdateScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/all_rounded_grey_background_stroke"
+            android:padding="6dp"
+            android:text="Pick a Scan"
+            android:textSize="@dimen/ui_14_dp"
+            android:textAlignment="center"
+            android:textColor="@color/themeIphoneBlue"
+            android:textStyle="bold"
+            android:visibility="visible"/>
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/btnViewScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/all_rounded_grey_background_stroke"
+            android:padding="6dp"
+            android:text="View a Scan"
+            android:textSize="@dimen/ui_14_dp"
+            android:textAlignment="center"
+            android:textColor="@color/themeIphoneBlue"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/all_rounded_grey_background_stroke"
+            android:padding="4dp"
+            android:text="Cancel"
+            android:textSize="@dimen/ui_14_dp"
+            android:textAlignment="center"
+            android:textColor="@color/themeIphoneBlue" />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

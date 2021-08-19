@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_large_top_corner_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgShowScan"
+            android:layout_width="@dimen/ui_200_dp"
+            android:layout_height="250dp"
+            android:src="@color/shimmerColor"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/ui_10_dp"
+            app:riv_corner_radius="@dimen/ui_8_dp"/>
+
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/all_rounded_grey_background_stroke"
+            android:padding="4dp"
+            android:text="Cancel"
+            android:textSize="@dimen/ui_14_dp"
+            android:textAlignment="center"
+            android:textColor="@color/themeIphoneBlue" />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

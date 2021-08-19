@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_15_dp"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:layout_marginEnd="@dimen/ui_15_dp"
+            android:background="@drawable/round_square_white_background">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/trailerImage"
+                android:layout_width="@dimen/ui_80_dp"
+                android:layout_height="@dimen/ui_80_dp"
+                android:layout_marginStart="@dimen/ui_12_dp"
+                android:layout_marginTop="@dimen/ui_12_dp"
+                android:layout_marginBottom="@dimen/ui_12_dp"
+                android:scaleType="fitXY"
+                android:src="@color/shimmerColor"
+                app:riv_corner_radius="@dimen/ui_8_dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/trailerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_10_dp"
+                android:layout_marginTop="@dimen/ui_10_dp"
+                android:text="Trailer Name"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_13_sp"
+                app:layout_constraintStart_toEndOf="@id/trailerImage"
+                app:layout_constraintTop_toTopOf="@id/trailerImage" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/trailerOwnerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/c2_dark1_grey"
+                android:textSize="@dimen/text_11_sp"
+                app:layout_constraintEnd_toStartOf="@id/returnComment"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/trailerName"
+                app:layout_constraintTop_toBottomOf="@id/trailerName" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/returnTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/ui_12_dp"
+                android:textColor="#606060"
+                android:textSize="@dimen/text_11_sp"
+                app:layout_constraintBottom_toBottomOf="@id/trailerName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/trailerName" />
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/returnComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/ui_12_dp"
+                tools:text="3 Days till 22/02"
+                android:textColor="#606060"
+                android:textSize="@dimen/text_9_sp"
+                app:layout_constraintBottom_toBottomOf="@id/trailerOwnerName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/trailerOwnerName" />
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/rightSideButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_12_dp"
+                android:layout_marginEnd="@dimen/ui_12_dp"
+                android:layout_marginBottom="@dimen/ui_5_dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="@dimen/ui_5_dp"
+                android:text="Rental Request"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_9_sp"
+                android:ems="10"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/trailerOwnerName"
+                tools:background="@drawable/complete_green_round_background" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/trailerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trailer Name"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/ui_50_dp"/>
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/rTopT1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TRAILER DETAILS"
+                android:textColor="@color/themeGrey"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trailerName" />
+
+            <RelativeLayout
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/ui_15_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rTopT1">
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:id="@+id/view_pager_gallery"
+                    android:layout_height="match_parent"/>
+                <me.relex.circleindicator.CircleIndicator
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ui_30_dp"
+                    app:ci_gravity="center"
+                    app:ci_height="@dimen/ui_5_dp"
+                    app:ci_width="@dimen/ui_5_dp"
+                    android:orientation="horizontal"
+
+                    app:ci_drawable_unselected="@drawable/all_rounded_grey_background"
+                    app:ci_drawable="@drawable/circle_complete_white_round_background"
+                    app:ci_margin="@dimen/ui_5_dp"
+                    android:id="@+id/circle_indicator"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/ui_10_dp"
+                    app:ci_orientation="horizontal"
+                    />
+            </RelativeLayout>
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/trailerImage"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/ui_15_dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rTopT1"
+                app:srcCompat="@color/shimmerColor" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lytTrailerDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewPager"
+                android:visibility="visible"
+                android:layout_marginBottom="@dimen/ui_15_dp">
+
+                <LinearLayout
+                    android:id="@+id/aVinNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="VIN NUMBER"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/aVinNumberET"
+                        android:layout_width="150dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="13sp"
+                        android:gravity="right"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/aInsuranceLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@drawable/complete_gray_edittext_round_background"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aVinNumber">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="INSURANCE"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="12sp" />
+
+                    <devx.app.licensee.common.custumViews.YellowBoldBtn
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/complete_yellow_round_background"
+                        android:maxLines="1"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="6dp"
+                        android:text="Upload"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_10_sp" />
+
+
+                    <devx.app.licensee.common.custumViews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="6dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="6dp"
+                        android:visibility="gone"
+                        android:text="Added.."
+                        android:textColor="@color/c2_light_green"
+                        android:textSize="@dimen/text_10_sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/aSizeLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aInsuranceLL">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SIZE"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/aSizeET"
+                        android:layout_width="150dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint=""
+                        android:maxLines="3"
+                        android:padding="6dp"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/aCapacityLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aSizeLL">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="CAPACITY"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/aCapacityET"
+                        android:layout_width="150dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint=""
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/aTareLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aCapacityLL">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TARE"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/aTareET"
+                        android:layout_width="150dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint=""
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/aDescriptionLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aTareLL">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="DESCRIPTION"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/aDescriptionET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@null"
+                        android:hint=""
+                        android:padding="8dp"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="@dimen/text_11_sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/aType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.666"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aDescriptionLL">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:id="@+id/aTypeTv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TYPE"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/aTypeET"
+                        android:layout_width="150dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint=""
+                        android:maxLines="1"
+
+                        android:padding="8dp"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/aAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="@dimen/ui_10_dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/aType"
+                    android:paddingBottom="@dimen/ui_10_dp">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="AGE (in years)"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/aAgeET"
+                        android:layout_width="150dp"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/c2_dark2_grey"
+                        android:textSize="13sp"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/documentTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_5_dp"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginEnd="@dimen/ui_10_dp"
+                android:text="DOCUMENTS"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lytTrailerDetails"
+                android:visibility="visible"
+                android:paddingStart="@dimen/ui_8_dp"/>
+            <LinearLayout
+                android:id="@+id/documentLL"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_20_dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/documentTitle">
+
+                <RelativeLayout
+                    android:id="@+id/lytservicingImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_15_dp"
+                    android:layout_marginEnd="@dimen/ui_10_dp"
+                    android:layout_weight="1">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/servicingImg"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_document"
+                        app:riv_corner_radius="@dimen/ui_10_dp"
+                        android:padding="@dimen/ui_20_dp"
+                        tools:ignore="VectorDrawableCompat"
+                        android:layout_marginTop="@dimen/ui_5_dp"/>
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ui_5_dp"
+                        android:text="SERVICING"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_12_sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/servicingImg"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lytBusineeImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_10_dp"
+                    android:layout_marginEnd="@dimen/ui_15_dp"
+                    android:layout_weight="1">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/businessDocImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_document"
+                        app:riv_corner_radius="@dimen/ui_10_dp"
+                        android:padding="@dimen/ui_20_dp"
+                        tools:ignore="VectorDrawableCompat"
+                        android:layout_marginTop="@dimen/ui_5_dp"/>
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/ui_5_dp"
+                        android:text="INSURANCE"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_12_sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/businessDocImage"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/upsellItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_10_dp"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginEnd="@dimen/ui_10_dp"
+                android:text="Linked Upsell Items"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_12_sp"
+                android:textAllCaps="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/documentLL"
+                android:visibility="visible"
+                android:paddingStart="@dimen/ui_8_dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/upSellItemRecyclerView"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_20_dp"
+                android:layout_marginEnd="@dimen/ui_15_dp"
+                android:orientation="horizontal"
+
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/upsellItemTitle"
+                tools:listitem="@layout/up_sell_item_layout" />
+
+            <RelativeLayout
+                android:id="@+id/rentalHistoryLayout"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_15_dp"
+                android:layout_marginEnd="@dimen/ui_15_dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:paddingTop="@dimen/ui_10_dp"
+                android:paddingBottom="@dimen/ui_10_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/upSellItemRecyclerView">
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/ui_12_dp"
+                    android:text="RENTAL HISTORY"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_12_sp"
+                    android:layout_centerVertical="true"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_view"
+                    android:layout_marginRight="@dimen/ui_10_dp"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rentalStatusLayout"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_15_dp"
+                android:layout_marginEnd="@dimen/ui_15_dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:paddingTop="@dimen/ui_10_dp"
+                android:paddingBottom="@dimen/ui_10_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/rentalHistoryLayout">
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:paddingStart="@dimen/ui_12_dp"
+                    android:text="RENTAL STATUS"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_12_sp" />
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/txtRentalStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:paddingEnd="@dimen/ui_12_dp"
+                    android:text="ACTIVE"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_12_sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rentalLocationLayout"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_15_dp"
+                android:layout_marginEnd="@dimen/ui_15_dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:paddingTop="@dimen/ui_10_dp"
+                android:paddingBottom="@dimen/ui_10_dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/rentalStatusLayout">
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:paddingStart="@dimen/ui_12_dp"
+                    android:text="LOCATION"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/text_12_sp" />
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:paddingEnd="@dimen/ui_12_dp"
+                    android:text="1525, EASTWELL AVE."
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/text_12_sp" />
+
+            </RelativeLayout>
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/viewTrailerCharges"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_15_dp"
+                android:layout_marginEnd="@dimen/ui_15_dp"
+                android:background="@drawable/complete_gray_edittext_round_background"
+                android:gravity="center"
+                android:paddingStart="@dimen/ui_12_dp"
+                android:paddingTop="@dimen/ui_10_dp"
+                android:paddingBottom="@dimen/ui_10_dp"
+                android:text="VIEW SCHEDULE OF CHARGES"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/text_12_sp"
+                app:layout_constraintBottom_toTopOf="@id/editTrailerButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rentalLocationLayout" />
+
+            <devx.app.licensee.common.custumViews.YellowBoldBtn
+                android:id="@+id/editTrailerButton"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_15_dp"
+                android:layout_marginEnd="@dimen/ui_15_dp"
+                android:layout_marginBottom="@dimen/ui_30_dp"
+                android:background="@color/themeDark"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/ui_8_dp"
+                android:paddingBottom="@dimen/ui_8_dp"
+                android:text="Edit Trailer"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewTrailerCharges" />
+
+            <devx.app.licensee.common.custumViews.YellowBoldBtn
+                android:id="@+id/deleteTrailerButton"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_15_dp"
+                android:layout_marginEnd="@dimen/ui_15_dp"
+                android:layout_marginBottom="@dimen/ui_30_dp"
+                android:background="@color/light_grey"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:paddingTop="@dimen/ui_8_dp"
+                android:paddingBottom="@dimen/ui_8_dp"
+                android:text="Delete Trailer"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTrailerButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/common_topbar_notitle_transparent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

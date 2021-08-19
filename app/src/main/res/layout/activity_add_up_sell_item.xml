@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/lytTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_40_dp"
+            android:text="Add Upsell Item"
+            android:textColor="@color/light_black"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/txtSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Upsell Item"
+            android:textColor="@color/themeGrey"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_below="@+id/lytTop"
+        android:layout_above="@+id/addUpSellItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lytUpsellDetails"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/upSellItemPreviewImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="@dimen/ui_8_dp"
+                    android:layout_marginRight="12dp"
+                    android:scaleType="fitCenter"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_photo_library"
+                    android:padding="@dimen/ui_10_dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <HorizontalScrollView
+                    android:id="@+id/upsellPreviewImagesScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:orientation="horizontal"
+                    android:background="@color/white"
+                    android:scrollbars="none"
+                    app:layout_constraintTop_toBottomOf="@+id/upSellItemPreviewImage"
+                    >
+                    <LinearLayout
+                        android:id="@+id/upSellItemPreviewImagesLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:scaleType="fitCenter"
+                        android:layout_margin="@dimen/ui_10_dp"
+                        />
+                </HorizontalScrollView>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/lytUpsell"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ui_40_dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/upsellPreviewImagesScrollView" >
+
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:text="ITEM NAME"
+                        android:textSize="@dimen/text_13_sp"
+                        android:textColor="@color/black"/>
+
+                    <Spinner
+                        android:id="@+id/spnrUpsell"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/ui_10_dp"
+                        android:layout_marginEnd="@dimen/ui_10_dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:spinnerMode="dropdown"
+                        android:textColor="#000"
+                        android:textSize="@dimen/text_13_sp" />
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/ui_10_dp"
+                        android:src="@drawable/arrow_down_float"
+                        android:tint="@color/c2_dark4_grey" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/aDescriptionLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/lytQuantity"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lytUpsell">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="DESCRIPTION"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/upSellItemDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="We manufacture three types of pantec trailers, the aluminium bodied, the galvanised steel enclosed trailer and the galvanised steel pantec top that fits onto a box trailer."
+                        android:imeOptions="actionNext"
+                        android:inputType="textMultiLine"
+                        android:padding="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_11_sp" />
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/lytQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ui_40_dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginBottom="@dimen/ui_20_dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@id/aDescriptionLL" >
+
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:id="@+id/titleQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:text="QUANTITY : "
+                        android:textSize="@dimen/text_13_sp"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"/>
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_toRightOf="@+id/titleQuantity"
+                        android:id="@+id/txtQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:text="1"
+                        android:textSize="@dimen/text_13_sp"
+                        android:textColor="@color/black"
+                        android:layout_centerVertical="true"/>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/ui_25_dp"
+                        android:layout_marginTop="@dimen/ui_8_dp"
+                        android:layout_marginBottom="@dimen/ui_10_dp"
+                        android:background="@drawable/complete_dark_gray_square_round_background"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/ui_8_dp"
+                        android:paddingEnd="@dimen/ui_8_dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/minusQuantity"
+                            android:layout_width="@dimen/ui_20_dp"
+                            android:layout_height="@dimen/ui_20_dp"
+                            android:layout_gravity="center_vertical"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:srcCompat="@drawable/ic_remove_black_24dp" />
+
+                        <View
+                            android:layout_width="@dimen/ui_1_dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/ui_7_dp"
+                            android:layout_marginTop="@dimen/ui_6_dp"
+                            android:layout_marginEnd="@dimen/ui_7_dp"
+                            android:layout_marginBottom="@dimen/ui_6_dp"
+                            android:background="#3C3C432E" />
+
+
+                        <ImageView
+                            android:id="@+id/plusQuantity"
+                            android:layout_width="@dimen/ui_20_dp"
+                            android:layout_height="@dimen/ui_20_dp"
+                            android:layout_gravity="center"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:scaleType="fitXY"
+                            app:srcCompat="@drawable/ic_add_black_24dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lytAddTrailerModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewSubTitle"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/ui_25_dp"
+                android:layout_marginTop="@dimen/ui_10_dp"
+                android:layout_below="@+id/lytUpsellDetails">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/trailerModelRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_20_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/select_up_sell_item_layout"
+                    tools:itemCount="2"
+                    tools:ignore="MissingConstraints" />
+
+                <devx.app.licensee.common.custumViews.RegularTextView
+                    android:id="@+id/txtNoTrailerModelAdded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Trailer Model Added"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_20_sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:layout_margin="@dimen/ui_10_dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/common_topbar_notitle_transparent" />
+    <devx.app.licensee.common.custumViews.YellowBoldBtn
+        android:id="@+id/addUpSellItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="25dp"
+        android:textColor="@color/black"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="NEXT: LINK TRAILER MODEL"
+        android:textAlignment="center"
+        android:background="@drawable/all_square_rounded_yellow_background"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

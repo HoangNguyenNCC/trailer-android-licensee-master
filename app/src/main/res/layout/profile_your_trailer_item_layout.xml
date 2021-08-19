@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/ui_15_dp"
+    android:layout_marginTop="@dimen/ui_10_dp"
+    android:layout_marginEnd="@dimen/ui_15_dp"
+    android:background="@drawable/round_square_white_background">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/trailerImage"
+        android:layout_width="@dimen/ui_80_dp"
+        android:layout_height="@dimen/ui_80_dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/ui_12_dp"
+        android:layout_marginTop="@dimen/ui_12_dp"
+        android:layout_marginBottom="@dimen/ui_12_dp"
+        android:scaleType="fitXY"
+        android:foreground="?attr/selectableItemBackground"
+        android:src="@color/shimmerColor"
+        app:riv_corner_radius="@dimen/ui_8_dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/trailerImage"
+        android:orientation="vertical"
+        android:layout_centerVertical="true">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:layout_marginRight="@dimen/ui_10_dp">
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/trailerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="left"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_13_sp"
+                />
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/returnTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/text_13_sp"
+                android:text="0days"
+                android:layout_marginRight="@dimen/ui_8_dp"
+                />
+        </RelativeLayout>
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/trailerOwnerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:layout_marginRight="@dimen/ui_10_dp"
+            android:textColor="@color/c2_dark1_grey"
+            android:textSize="@dimen/text_11_sp"
+            tools:text="Adam Sandler"
+            android:visibility="gone"/>
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/mTxtAvailabilityStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:layout_marginEnd="@dimen/ui_12_dp"
+            android:layout_marginRight="@dimen/ui_10_dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_9_sp"
+            tools:text="Available"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/ui_5_dp"
+            android:paddingTop="@dimen/ui_2_dp"
+            android:paddingBottom="@dimen/ui_2_dp"
+            android:paddingRight="@dimen/ui_5_dp"
+            android:background="@drawable/complete_green_round_corner_background"/>
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+

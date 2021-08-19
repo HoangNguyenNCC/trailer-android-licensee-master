@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".modules.addBooking.AddBookingActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/topBar"
+            layout="@layout/common_topbar_notitle_transparent" />
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/displayTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Dates"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_20_sp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topBar" />
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/displayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Dates"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_12_sp"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/displayTitle" />
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/calendarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/ui_20_dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/displayText"
+    android:visibility="visible">
+    <com.applandeo.materialcalendarview.CalendarView
+        android:id="@+id/calenderView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginStart="@dimen/ui_12_dp"
+        android:layout_marginEnd="@dimen/ui_12_dp"
+        android:background="@drawable/round_square_white_background"
+        app:abbreviationsLabelsColor="@color/black"
+        app:headerColor="@color/themeDark"
+        app:headerLabelColor="@color/black"
+        app:selectionColor="@color/themeDark"
+        app:swipeEnabled="true"
+        app:todayLabelColor="@color/themeLight"
+        app:type="range_picker"
+        app:selectionLabelColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/calendarLayout"
+        app:layout_constraintEnd_toEndOf="@+id/calendarLayout"
+        app:layout_constraintTop_toTopOf="@+id/calendarLayout"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/timeSelectionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calenderView">
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_20_dp"
+            android:layout_marginTop="@dimen/ui_50_dp"
+            android:text="From"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16_sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/startDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_20_dp"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:text="To Date"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtFrom" />
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/selectStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ui_20_dp"
+            android:background="@drawable/complete_gray_edittext_round_background"
+            android:hint="Start Time"
+            android:paddingStart="@dimen/ui_25_dp"
+            android:paddingTop="@dimen/ui_8_dp"
+            android:paddingEnd="@dimen/ui_25_dp"
+            android:paddingBottom="@dimen/ui_8_dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/startDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/startDate" />
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_20_dp"
+            android:layout_marginTop="@dimen/ui_50_dp"
+            android:text="To"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16_sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startDate" />
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/endDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ui_20_dp"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:text="End Date"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtTo" />
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/selectEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ui_20_dp"
+            android:background="@drawable/complete_gray_edittext_round_background"
+            android:hint="End Time"
+            android:paddingStart="@dimen/ui_25_dp"
+            android:paddingTop="@dimen/ui_8_dp"
+            android:paddingEnd="@dimen/ui_25_dp"
+            android:paddingBottom="@dimen/ui_8_dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/endDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/endDate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ui_30_dp"
+        android:background="@drawable/complete_yellow_round_background"
+        android:paddingStart="@dimen/ui_30_dp"
+        android:paddingTop="@dimen/ui_10_dp"
+        android:paddingEnd="@dimen/ui_30_dp"
+        android:paddingBottom="@dimen/ui_10_dp"
+        android:text="Next"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeSelectionLayout"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/trailerUpsellLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/displayText"
+            android:layout_marginTop="@dimen/ui_20_dp"
+            android:visibility="gone">
+            <LinearLayout
+                android:id="@+id/requestTypeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ui_32_dp"
+                android:layout_marginStart="@dimen/ui_15_dp"
+                android:layout_marginTop="@dimen/ui_20_dp"
+                android:layout_marginEnd="@dimen/ui_15_dp"
+                android:background="@drawable/all_square_rounded_greyy_background"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:weightSum="2"
+                tools:visibility="visible">
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/trailersOption"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/ui_2_dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/all_square_rounded_yellow_background"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="Trailers"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_12_sp" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="@dimen/ui_1_dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/ui_5_dp"
+                    android:layout_marginTop="@dimen/ui_8_dp"
+                    android:layout_marginBottom="@dimen/ui_8_dp"
+                    android:background="#8E8E93" />
+
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/upSellItemsOption"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/ui_2_dp"
+                    android:layout_weight="1"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="UpSell Items"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/text_12_sp" />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/recyclerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/requestTypeLayout"
+                android:layout_marginTop="@dimen/ui_20_dp">
+                <devx.app.licensee.common.custumViews.BoldTextView
+                    android:id="@+id/txtNoDataAdded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Data Added"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_20_sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/topBar"
+                    android:layout_centerInParent="true"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/trailersRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_20_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/select_up_sell_item_layout"
+                    tools:itemCount="2"
+                    android:visibility="gone"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/upSellItemRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ui_20_dp"
+                    android:layout_marginEnd="@dimen/ui_25_dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/select_up_sell_item_layout"
+                    tools:itemCount="2"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <devx.app.licensee.common.custumViews.BoldTextView
+                android:id="@+id/addScheduleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ui_30_dp"
+                android:background="@drawable/complete_yellow_round_background"
+                android:paddingStart="@dimen/ui_30_dp"
+                android:paddingTop="@dimen/ui_10_dp"
+                android:paddingEnd="@dimen/ui_30_dp"
+                android:paddingBottom="@dimen/ui_10_dp"
+                android:text="ADD SCHEDULE"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerLayout"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

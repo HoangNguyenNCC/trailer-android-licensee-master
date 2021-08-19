@@ -1,0 +1,16 @@
+<resources xmlns:color="http://schemas.android.com/apk/res-auto">
+    <string name="app_name">Licensee App</string>
+    <string name="capture_using_camera">Capture Using Camera</string>
+    <string name="select_using_gallery">Select Using Gallery</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="trailer_details">These Rust Free Tradesman\'s Tops are outstanding value - manufactured from low maintenance galvanised steel, packed with outstanding features and made to last and come with unbeatable 2 year Warranty and FREE 2 years Roadside Assist. \n\n\nThe ultimate in trailer security, Tradesman\'s Canopies allow for safe storage of tools and equipment.</string>
+    <string name="availability">Availability</string>
+    <string name="title_activity_trailer_tracking">Map</string>
+
+    <string name="err_try_again">Something went wrong, Please try again!</string>
+
+    <string name="str_back_to_login">BACK TO <font color='#FFD627'>LOGIN</font></string>
+
+
+</resources>

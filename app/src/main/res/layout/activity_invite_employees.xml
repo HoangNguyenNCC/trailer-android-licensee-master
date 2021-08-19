@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".modules.inviteEmployees.InviteEmployeesActivity">
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/txtInviteEmployees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ui_20_dp"
+        android:text="Invite Employees"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/text_20_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trailers2You"
+        android:textColor="@color/themeGrey"
+        android:textSize="@dimen/text_12_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtInviteEmployees" />
+
+    <RelativeLayout
+        android:id="@+id/emailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_40_dp"
+        android:layout_marginStart="@dimen/ui_30_dp"
+        android:layout_marginTop="@dimen/ui_50_dp"
+        android:layout_marginEnd="@dimen/ui_30_dp"
+        android:background="@drawable/all_rounded_grey_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appName">
+
+        <EditText
+            android:id="@+id/emailIdET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ui_8_dp"
+            android:background="@null"
+            android:hint="Employee Email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/ui_10_dp"
+            android:paddingEnd="@dimen/ui_5_dp"
+            android:textSize="@dimen/text_13_sp" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/spnrLayout"
+        android:layout_width="@dimen/ui_0_dp"
+        android:layout_height="@dimen/ui_40_dp"
+        android:layout_marginTop="@dimen/ui_10_dp"
+        android:layout_marginStart="@dimen/ui_30_dp"
+        android:layout_marginEnd="@dimen/ui_30_dp"
+        android:background="@drawable/all_rounded_grey_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailLayout">
+
+
+        <Spinner
+            android:id="@+id/stateSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/ui_10_dp"
+            android:layout_marginEnd="@dimen/ui_10_dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:spinnerMode="dropdown"
+            android:textColor="#000"
+            android:textSize="@dimen/text_13_sp" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/ui_10_dp"
+            android:src="@drawable/arrow_down_float"
+            android:tint="@color/c2_dark4_grey" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/phoneNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_40_dp"
+        android:layout_marginStart="@dimen/ui_30_dp"
+        android:layout_marginTop="@dimen/ui_10_dp"
+        android:layout_marginEnd="@dimen/ui_30_dp"
+        android:visibility="gone"
+        android:background="@drawable/all_rounded_grey_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spnrLayout"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ui_8_dp"
+            android:background="@null"
+            android:hint="Employee Phone"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:paddingStart="@dimen/ui_10_dp"
+            android:paddingEnd="@dimen/ui_5_dp"
+            android:textSize="@dimen/text_13_sp" />
+
+    </RelativeLayout>
+
+    <devx.app.licensee.common.custumViews.BoldTextView
+        android:id="@+id/addPermissionButton"
+        android:layout_width="@dimen/ui_0_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_30_dp"
+        android:layout_marginTop="@dimen/ui_15_dp"
+        android:layout_marginEnd="@dimen/ui_30_dp"
+        android:background="@drawable/all_square_rounded_yellow_background"
+        android:textColor="@color/light_black"
+        android:gravity="center"
+        android:padding="@dimen/ui_8_dp"
+        android:text="Add Permission"
+        android:textSize="@dimen/text_12_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneNumberLayout" />
+
+    <devx.app.licensee.common.custumViews.YellowBoldBtn
+        android:id="@+id/sendInviteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_30_dp"
+        android:layout_marginEnd="@dimen/ui_30_dp"
+        android:layout_marginBottom="@dimen/ui_50_dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:padding="@dimen/ui_12_dp"
+        android:text="SEND INVITE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:background="@color/themeDark" />
+
+    <RelativeLayout
+        android:id="@+id/iconLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ui_12_dp"
+        android:background="@drawable/circle_complete_light_transparent_round_backgrnd"
+        android:padding="@dimen/ui_7_dp"
+        app:layout_constraintBottom_toBottomOf="@id/sendInviteButton"
+        app:layout_constraintEnd_toEndOf="@id/sendInviteButton"
+        app:layout_constraintTop_toTopOf="@id/sendInviteButton">
+
+        <ImageView
+            android:layout_width="@dimen/ui_15_dp"
+            android:layout_height="@dimen/ui_15_dp"
+            app:srcCompat="@drawable/ic_arrow_forward_white_24dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/transparent"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/back_btn_padding"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_close_grey_black" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

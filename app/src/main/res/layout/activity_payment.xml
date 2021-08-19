@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/payicon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="180dp"
+                android:src="@drawable/pay_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_10_dp"
+                android:text="COMPLETE PAYMENT"
+                android:textColor="@color/themeLight"
+                android:textSize="@dimen/text_12_sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/payicon" />
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ui_5_dp"
+                android:text="Enter the payment \nInformation"
+                android:textAlignment="center"
+                android:textColor="@color/themeDark"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <LinearLayout
+                android:id="@+id/cardNumberLayout"
+                android:layout_width="@dimen/ui_0_dp"
+                android:layout_height="@dimen/ui_40_dp"
+                android:layout_marginStart="@dimen/ui_20_dp"
+                android:layout_marginTop="@dimen/ui_40_dp"
+                android:layout_marginEnd="@dimen/ui_20_dp"
+                android:background="@drawable/all_rounded_grey_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView1">
+
+                <devx.app.licensee.common.custumViews.BoldBlackTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/ui_12_dp"
+                    android:text="CARD NUMBER"
+                    android:textSize="@dimen/text_13_sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/ui_20_dp"
+                    android:layout_height="@dimen/ui_20_dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/ui_80_dp"
+                    android:src="@drawable/card_number_icon" />
+
+                <EditText
+                    android:id="@+id/cardNumberET"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/ui_5_dp"
+                    android:layout_marginEnd="@dimen/ui_10_dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="start"
+                    android:hint="xxxxxxxxx1234"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_13_sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/ui_20_dp"
+                android:layout_marginTop="@dimen/ui_15_dp"
+                android:layout_marginEnd="@dimen/ui_20_dp"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardNumberLayout">
+
+                <LinearLayout
+                    android:id="@+id/payExpiryDateLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ui_40_dp"
+                    android:layout_marginEnd="@dimen/ui_6_dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/all_rounded_grey_background"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/ui_12_dp"
+                        android:text="EXPIRY DATE"
+                        android:textSize="@dimen/text_12_sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/ui_5_dp"
+                        android:layout_weight="5"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="12"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textSize="@dimen/text_12_sp" />
+
+                    <devx.app.licensee.common.custumViews.BoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/ui_3_dp"
+                        android:text="/" />
+
+                    <EditText
+                        android:layout_width="@dimen/ui_15_dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/ui_5_dp"
+                        android:layout_marginEnd="@dimen/ui_10_dp"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="12"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textSize="@dimen/text_13_sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/ui_0_dp"
+                    android:layout_height="@dimen/ui_40_dp"
+                    android:layout_marginStart="@dimen/ui_6_dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/all_rounded_grey_background"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/payExpiryDateLayout"
+                    app:layout_constraintTop_toBottomOf="@id/payExpiryDateLayout">
+
+                    <devx.app.licensee.common.custumViews.BoldBlackTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/ui_12_dp"
+                        android:text="CVV"
+                        android:textSize="@dimen/text_13_sp" />
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/ui_5_dp"
+                        android:layout_marginEnd="@dimen/ui_10_dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="..."
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:textSize="@dimen/text_13_sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <devx.app.licensee.common.custumViews.YellowBoldBtn
+        android:id="@+id/payNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="Pay Now"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/chooseOtherpay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <devx.app.licensee.common.custumViews.RegularTextView
+        android:id="@+id/chooseOtherpay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginBottom="20dp"
+        android:text="Choose another payment mode"
+        android:textColor="@color/themeDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <include layout="@layout/common_topbar_notitle_transparent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_large_top_corner_white"
+    android:nestedScrollingEnabled="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="@dimen/ui_40_dp"
+            android:layout_marginTop="@dimen/ui_30_dp"
+            android:background="@drawable/all_rounded_grey_background"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/mapCardView"
+            app:layout_constraintStart_toStartOf="@id/mapCardView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/ui_20_dp"
+                android:layout_height="@dimen/ui_20_dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/ui_12_dp"
+                android:src="@drawable/search_icon" />
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:hint="Location"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingStart="@dimen/ui_10_dp"
+                android:paddingEnd="@dimen/ui_10_dp"
+                android:textSize="@dimen/text_13_sp" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mapCardView"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="@dimen/ui_15_dp"
+            android:layout_marginTop="@dimen/ui_20_dp"
+            android:layout_marginEnd="@dimen/ui_15_dp"
+            android:layout_marginBottom="@dimen/ui_12_dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchLayout">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/markerRing"
+                android:layout_width="@dimen/ui_30_dp"
+                android:layout_height="@dimen/ui_40_dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/address_location_icon_red" />
+
+        </androidx.cardview.widget.CardView>
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/txtAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_12_dp"
+            android:text="Address"
+            android:textColor="@color/themeDark"
+            android:textSize="@dimen/text_14_sp"
+            app:layout_constraintStart_toStartOf="@id/mapCardView"
+            app:layout_constraintTop_toBottomOf="@id/mapCardView" />
+
+        <devx.app.licensee.common.custumViews.BoldTextView
+            android:id="@+id/addressTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Address Selected"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/text_15_sp"
+            app:layout_constraintStart_toStartOf="@id/mapCardView"
+            app:layout_constraintTop_toBottomOf="@id/txtAddress" />
+
+        <devx.app.licensee.common.custumViews.RegularTextView
+            android:id="@+id/addressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/text_12_sp"
+            app:layout_constraintStart_toStartOf="@id/addressTitle"
+            app:layout_constraintTop_toBottomOf="@id/addressTitle"
+            tools:text="Melboune, Austrilia - 123456" />
+
+        <LinearLayout
+            android:id="@+id/houseNumberLayout"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="@dimen/ui_40_dp"
+            android:layout_marginTop="@dimen/ui_20_dp"
+            android:background="@drawable/all_rounded_grey_background"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/mapCardView"
+            app:layout_constraintStart_toStartOf="@id/mapCardView"
+            app:layout_constraintTop_toBottomOf="@id/addressText">
+
+            <ImageView
+                android:layout_width="@dimen/ui_20_dp"
+                android:layout_height="@dimen/ui_20_dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/ui_12_dp"
+                android:src="@drawable/card_number_icon" />
+
+            <EditText
+                android:id="@+id/houseNumberET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:hint="HOUSE NUMBER"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:paddingStart="@dimen/ui_10_dp"
+                android:paddingEnd="@dimen/ui_10_dp"
+                android:textSize="@dimen/text_13_sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/landmarkLayout"
+            android:layout_width="@dimen/ui_0_dp"
+            android:layout_height="@dimen/ui_40_dp"
+            android:layout_marginTop="@dimen/ui_20_dp"
+            android:background="@drawable/all_rounded_grey_background"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/mapCardView"
+            app:layout_constraintStart_toStartOf="@id/mapCardView"
+            app:layout_constraintTop_toBottomOf="@id/houseNumberLayout">
+
+            <ImageView
+                android:layout_width="@dimen/ui_20_dp"
+                android:layout_height="@dimen/ui_20_dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/ui_12_dp"
+                android:src="@drawable/card_number_icon" />
+            <EditText
+                android:id="@+id/landmarkET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:hint="LANDMARK"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:paddingStart="@dimen/ui_10_dp"
+                android:paddingEnd="@dimen/ui_10_dp"
+                android:textSize="@dimen/text_13_sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addAddressLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_30_dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/closeDialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/landmarkLayout">
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select this address"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_13_sp" />
+
+            <ImageView
+                android:layout_width="@dimen/ui_20_dp"
+                android:layout_height="@dimen/ui_20_dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_8_dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/blue_forward_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/closeDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_20_dp"
+            android:layout_marginBottom="@dimen/ui_20_dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addAddressLayout">
+
+            <devx.app.licensee.common.custumViews.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="@color/dimGrey"
+                android:textSize="@dimen/text_13_sp" />
+
+            <ImageView
+                android:layout_width="@dimen/ui_16_dp"
+                android:layout_height="@dimen/ui_16_dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/ui_8_dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dim_grey_close" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
